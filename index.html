@@ -86,7 +86,7 @@
 		<section id="contato">
 			<h2>Contato</h2>
 			<p class="entre-em-contato">Entre em contato comigo através do formulário abaixo:</p>
-			<form action="https://formsubmit.co/contatovhs4@gmail.com" method="post">
+			<form id="form">
 				<label for="nome">Nome:</label>
 				<input type="text" id="nome" name="nome" required>
 
@@ -118,6 +118,25 @@
 
 	<script src="/assets/javascript/script.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>
+        const form = document.getElementById('form');
+
+        form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch("https://formsubmit.co/contatovhs4@gmail.com", {
+            method: "POST",
+            body: new FormData(form)
+            });
+            
+            alert('Formulário enviado com sucesso!');
+        } catch (error) {
+            console.error('Erro ao enviar o formulário:', error);
+        }
+        });
+
+    </script>
     <script>
         var typed = new Typed(".type", {
             strings: [
