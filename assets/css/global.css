@@ -198,10 +198,6 @@
     height: 3em;
   }
 
-  .ultop li {
-    margin-bottom: 2.5em;
-  }
-
   .ultop li:hover {
     padding: 10px;
     background-color: rgba(51, 51, 51, .8);
@@ -286,5 +282,9 @@
 
     .sobreprofissao {
         display: flex;
+    }
+
+    .ultop li {
+      margin-bottom: 2.5em;
     }
   }
