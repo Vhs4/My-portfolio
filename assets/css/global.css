@@ -112,6 +112,11 @@
     margin-right: 0;
   }
 
+  #projetos img:hover {
+    padding: .3em;
+    transition: ease .5s;
+  }
+
   #projetos p {
     margin-bottom: 1em;
     word-wrap: break-word;
@@ -166,6 +171,13 @@
     width: 96px;
     height: 96px;
     object-fit: contain;
+  }
+
+  .imgtecnologias:hover {
+    background-color: transparent;
+    padding: .5em;
+    transition: ease-in-out .5s;
+    cursor: pointer;
   }
 
   .ul-tecnologias {
