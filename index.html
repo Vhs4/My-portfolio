@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Victor Hugo!">
+    <link rel="shortcut icon" href="/imgs/logos/Minha-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <title>Portfólio de Vhs4</title>
+</head>
+<body>
+    <header>
+        <h1>Meu Portfólio</h1>
+
+		<nav>
+			<ul class="ultop">
+                <li><a href="#sobre-mim">Sobre mim</a></li>
+				<li><a href="#projetos">Projetos</a></li>
+				<li><a href="#contato">Contato</a></li>
+			</ul>
+		</nav>
+        <h2 class="sobreprofissao"><span class="type"></span></h2>
+        
+	</header>
+
+	<main>
+        <section id="sobre-mim">
+            <div class="container">
+              <h2>Sobre mim</h2>
+              <p>Olá, seja bem-vindo(a) ao meu site de portfólio, me chamo Victor, sou um programador que atualmente possuo conhecimento em: HTML, CSS, JavaScript, React, Vuejs, e também curto muito a tecnologia desde novo! Espero que curta meu portfólio, e se gostou me chame para conversar nos meus meios de contato que estão logo abaixo na aba de contato.</p>
+            </div>
+          </section>
+
+        <section id="tecnologias">
+            <h2>Tecnologias em que eu possuo conhecimento:</h2> <br>
+            <ul class="ul-tecnologias">
+                <li><img class="imgtecnologias" src="/imgs/logos/html.svg" alt="html"></li>
+                <li><img class="imgtecnologias" src="/imgs/logos/css.svg" alt="css"></li>
+                <li><img class="imgtecnologias" src="/imgs/logos/javascript.svg" alt="javascript"></li>
+                <li><img class="imgtecnologias" src="/imgs/logos/react.svg" alt="react"></li>
+                <li><img class="imgtecnologias" src="/imgs/logos/vuejs.svg" alt="vuejs"></li>
+            </ul>
+        </section>
+
+        <section id="projetos">
+			<h2>Projetos</h2>
+			<p>Alguns dos meus projetos 😊</p>
+			<ul>
+				<li>
+                    <h3>Conversor de moedas</h3>
+                    <a href="https://github.com/Vhs4/Conversor-de-moedas" target="_blank"><img class="imgprojetos" src="/imgs/projetos/conversor_de_moedas.png" alt="imagem de um conversor de moedas"></a>
+                    <p>Neste projeto eu realizei um front-end de um conversor de moedas.</p>
+                        <h4>Tecnologias utilizadas:</h4>
+                        <p>HTML,
+                        CSS,
+                        JavaScript,
+                        Git e Github,
+                        Apex Charts e
+                        Flag Icons.</p>
+                </li>
+				<li>
+                    <h3>Página de login</h3>
+                    <a href="https://github.com/Vhs4/Ignite-lab-design-system" target="_blank"><img class="imgprojetos" src="/imgs/projetos/pagina_de_login.png" alt="imagem de uma página de login"></a>
+                    <p>Neste projeto eu realizei um front-end de uma página de login.</p>
+                        <h4>Tecnologias utilizadas:</h4>
+                        <p>HTML,
+                        CSS,
+                        JavaScript,
+                        Typescript,
+                        Git e Github.</p></li>
+				<li>
+                    <h3>Site responsivo com flexbox</h3>
+                    <a href="https://github.com/Vhs4/Site-responsivo-flexbox" target="_blank"><img class="imgprojetos" src="/imgs/projetos/site_responsivo_flexbox.png" alt="imagem de um site responsivo com flexbox"></a>
+                    <p>Neste projeto eu realizei um front-end de um site totalmente responsivo, somente com flexbox!</p>
+                        <h4>Tecnologias utilizadas:</h4>
+                        <p>HTML,
+                        CSS,
+                        Git e Github.</p></li>
+			</ul>
+		</section>
+
+		<section id="contato">
+			<h2>Contato</h2>
+			<p class="entre-em-contato">Entre em contato comigo através do formulário abaixo:</p>
+			<form action="https://formsubmit.co/contatovhs4@gmail.com" method="post">
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="nome" required>
+
+				<label for="email">E-mail:</label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="mensagem">Mensagem:</label>
+				<textarea id="mensagem" name="mensagem" required></textarea>
+
+				<input type="submit" value="Enviar">
+                <input type="hidden" name="_subject" value="Novo contato!">
+                <input type="text" name="_honey" style="display: none;">
+                <input type="hidden" name="_captcha" value="false">
+			</form>
+
+			<p class="paragrafo-redessociais">Ou através do meu e-mail: <a href="mailto:contatovhs4@gmail.com">contatovhs4@gmail.com</a></p>
+            <p class="paragrafo-redessociais">Ou também através das minhas redes sociais abaixo:
+                <ul class="redes-sociais">
+                    <li><a href="https://github.com/Vhs4" target="_blank"><img class="logo-redes-sociais" src="/imgs/logos/github.svg" alt=""></a></li>
+                    <li><a href="https://www.linkedin.com/in/victor-hugo-9b7225250/" target="_blank"><img class="logo-redes-sociais" src="/imgs/logos/linkedin.svg" alt=""></a></li>
+                </ul>
+            </p>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Victor Hugo (Vhs4) - Todos os direitos reservados.</p>
+	</footer>
+
+	<script src="/assets/javascript/script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".type", {
+            strings: [
+                "Desenvolvedor front-end"
+            ],
+            typeSpeed: 60,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
+</body>
+</html>

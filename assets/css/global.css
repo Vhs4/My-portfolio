@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h4 {
+    margin-bottom: 1em;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
+    grid-gap: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav li {
+    margin-left: 20px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 50px;
+  }
+  
+  section h2 {
+    margin-bottom: 20px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form input,
+  form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  form input[type="submit"] {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  ul li {
+    list-style: none;
+  }
+  
+  #sobre-mim {
+    padding: 50px 0;
+    color: #fff;
+  }
+  
+  #sobre-mim .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #projetos ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #projetos li {
+    flex: 1 1 250px;
+  }
+
+  #projetos li:last-child {
+    margin-right: 0;
+  }
+
+  #projetos p {
+    margin-bottom: 1em;
+    word-wrap: break-word;
+    width: 20em;
+  }
+
+  #projetos h3 {
+    margin-bottom: 1em;
+  }
+  
+  .section-sobre-mim {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .section-sobre-mim p {
+    font-size: 1.2em;
+  }
+  
+
+  .sobreprofissao {
+    padding: 0px 20px;
+    color: rgba(255, 255, 255, .7);
+  }
+
+  .imgprojetos {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 1em;
+  }
+
+  #tecnologias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #tecnologias ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #tecnologias ul li {
+    margin-right: 7em;
+  }
+
+  .imgtecnologias {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+  }
+
+  .ul-tecnologias {
+    display: flex;
+  }
+
+  .ul-tecnologias li {
+    margin-top: 20px;
+    margin-right: 12em;
+  }
+  
+  .entre-em-contato {
+    margin-bottom: 1em;
+  }
+
+  .paragrafo-redessociais {
+    margin-bottom: 1em;
+  }
+
+  .redes-sociais {
+    display: flex;
+  }
+
+  .redes-sociais li {
+    margin-right: 1em;
+  }
+
+  .logo-redes-sociais {
+    width: 3em;
+    height: 3em;
+  }
+
+  .ultop li:hover {
+    padding: 10px;
+    background-color: rgba(51, 51, 51, .8);
+    transition:ease-in-out .5s;
+  }
+
+  .ultop li a:hover {
+    padding: 10px;
+    background-color: transparent;
+  }
+  
+
+  @media (max-width: 600px) {
+    .section-sobre-mim {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    nav {
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+    
+    li {
+      margin-bottom: 10px;
+    }
+
+    form label,
+    form input,
+    form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    form input[type="submit"] {
+      margin-top: 20px;
+    }
+    
+    .sobreprofissao {
+      display: none;
+    }
+
+    #projetos ul {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #projetos li {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    #projetos li:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .imgprojetos {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .sobreprofissao {
+        display: flex;
+    }
+  }
