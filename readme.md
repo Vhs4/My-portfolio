@@ -6,10 +6,12 @@ Criação do meu portfólio totalmente responsível.
 
 ## 💻 Tecnologias
 
+- JavaScript
+- TailwindCSS
 - HTML
 - CSS
-- JavaScript
 - Git e Github
 
-## 📩 Contato 
+## 📩 Contato
+
 contatovhs4@gmail.com
