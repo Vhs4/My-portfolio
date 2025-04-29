@@ -11,9 +11,9 @@ export function Projetos() {
   const projects = [
     {
       title: "Sistema de análise de fraudes",
-      description: "Desenvolvimento de um sistema de análise de fraudes utilizando inteligência artificial.",
+      description: "Desenvolvimento do front-end de um sistema de análise de fraudes utilizando inteligência artificial.",
       image: "/dashboard.png?height=300&width=600",
-      technologies: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+      technologies: ["React", "AWS", "Tailwind CSS", "TypeScript", "HTML"],
       demoUrl: "",
       repoUrl: "",
     },
