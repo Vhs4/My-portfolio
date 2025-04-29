@@ -62,7 +62,7 @@ export function Projetos() {
             >
               <Card className="overflow-hidden h-full flex flex-col">
                 <div className="relative h-48 w-full">
-                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+                  <Image src={project.image} alt={project.title} fill className="object-cover" />
                 </div>
                 <CardContent className="p-6 flex-1 flex flex-col">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
