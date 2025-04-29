@@ -41,7 +41,6 @@ const keywords = [
 ]
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfoliovhs4.vercel.app"),
   title: {
     default: "Victor Hugo | Desenvolvedor Full Stack | vhs4",
     template: "%s | Victor Hugo - vhs4",
@@ -78,7 +77,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "profile",
     locale: "pt_BR",
-    url: "https://portfoliovhs4.vercel.app",
     siteName: "Victor Hugo | Desenvolvedor Full Stack",
     title: "Victor Hugo (vhs4) | Desenvolvedor Full Stack Premiado",
     description:
@@ -157,7 +155,6 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              url: "https://portfoliovhs4.vercel.app",
               name: "Victor Hugo | Desenvolvedor Full Stack",
               description:
                 "Portfólio profissional de Victor Hugo (vhs4), desenvolvedor full stack premiado pela NASA.",
