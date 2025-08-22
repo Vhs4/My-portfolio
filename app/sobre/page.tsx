@@ -171,6 +171,14 @@ export default function SobrePage() {
   const [scrollY, setScrollY] = useState(0)
   const [activeSection, setActiveSection] = useState(0)
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -355,8 +363,7 @@ export default function SobrePage() {
                   key={categoria.categoria}
                   className="bg-pure-black p-8 pb-12 rounded-2xl border border-royal-blue/20 hover:border-royal-blue/40 transition-all duration-300 h-fit"
                   style={{
-                    // Aplica o efeito parallax apenas em telas grandes
-                    transform: window.innerWidth >= 1024
+                    transform: windowWidth >= 1024
                       ? `translateY(${scrollY * 0.05 * (index % 2 === 0 ? 1 : -1)}px)`
                       : 'none',
                   }}
