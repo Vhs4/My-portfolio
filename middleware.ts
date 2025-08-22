@@ -46,7 +46,7 @@ export function middleware(request: NextRequest) {
             "media-src 'self' data: blob:",
             "object-src 'none'",
             "base-uri 'self'",
-            "form-action 'self'",
+            "form-action 'self' https://formsubmit.co", // 🔥 liberado aqui
             "frame-ancestors 'none'",
             "upgrade-insecure-requests"
         ].join('; ')
