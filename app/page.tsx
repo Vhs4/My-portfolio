@@ -264,7 +264,7 @@ export default function HomePage() {
                   <div className="text-sm text-gray-400">
                     <span className="text-royal-blue font-semibold">Milhares</span> de usuários impactados
                   </div>
-                  <Link href={"http://localhost:3000/"} className="cursor-pointer">
+                  <Link href={"https://www.prudential.com.br/fully"} className="cursor-pointer">
                     <ExternalLink className="h-5 w-5 text-royal-blue group-hover:text-royal-blue-light transition-colors" />
                   </Link>
                 </div>
@@ -305,9 +305,9 @@ export default function HomePage() {
                   <div className="text-sm text-gray-400">
                     <span className="text-royal-blue font-semibold">Campeão</span> Regional NASA
                   </div>
-                  <Link href={"http://localhost:3000/"} className="cursor-pointer">
+                  {/* <Link href={"http://localhost:3000/"} className="cursor-pointer">
                     <ExternalLink className="h-5 w-5 text-royal-blue group-hover:text-royal-blue-light transition-colors" />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -346,9 +346,9 @@ export default function HomePage() {
                   <div className="text-sm text-gray-400">
                     <span className="text-royal-blue font-semibold">2º Lugar</span> Nacional
                   </div>
-                  <Link href={"http://localhost:3000/"} className="cursor-pointer">
+                  {/* <Link href={"http://localhost:3000/"} className="cursor-pointer">
                     <ExternalLink className="h-5 w-5 text-royal-blue group-hover:text-royal-blue-light transition-colors" />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
