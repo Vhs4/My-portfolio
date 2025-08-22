@@ -241,7 +241,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <div className="bg-white p-8 rounded-2xl shadow-lg">
             <div className="flex items-start gap-6">
               <Image
-                src="/professional-developer-avatar-blue-lighting.webp"
+                src="/fotoperfil.webp"
                 alt="Victor Hugo"
                 width={80}
                 height={80}

@@ -38,18 +38,19 @@ export function middleware(request: NextRequest) {
         // Content Security Policy (more restrictive for sensitive pages)
         'Content-Security-Policy': [
             "default-src 'self'",
-            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com",
+            "script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com",
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-            "img-src 'self' data: blob: https:",
+            "img-src 'self' https: blob:",
             "font-src 'self' https://fonts.gstatic.com",
             "connect-src 'self' https://api.anthropic.com",
-            "media-src 'self' data: blob:",
+            "media-src 'self' blob:",
             "object-src 'none'",
             "base-uri 'self'",
-            "form-action 'self' https://formsubmit.co", // 🔥 liberado aqui
+            "form-action 'self' https://formsubmit.co",
             "frame-ancestors 'none'",
             "upgrade-insecure-requests"
         ].join('; ')
+
     }
 
     // Apply security headers

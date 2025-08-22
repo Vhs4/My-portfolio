@@ -335,7 +335,7 @@ export default function SobrePage() {
             <div className="relative">
               <div className="animate-float">
                 <Image
-                  src="/professional-developer-avatar-blue-lighting.webp"
+                  src="/fotoperfil.webp"
                   alt="Minha foto animada"
                   width={600}
                   height={400}

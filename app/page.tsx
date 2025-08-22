@@ -119,7 +119,7 @@ export default function HomePage() {
                 }`}>
                 <div>
                   <Image
-                    src="/professional-developer-avatar-blue-lighting.webp"
+                    src="/fotoperfil.webp"
                     alt="Victor Hugo - Desenvolvedor"
                     width={128}
                     height={128}
