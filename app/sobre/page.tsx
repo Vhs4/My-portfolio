@@ -206,7 +206,7 @@ export default function SobrePage() {
   }, [])
 
   return (
-    <main className="min-h-screen bg-pure-black text-pure-white">
+    <main className="min-h-screen bg-pure-black text-pure-white p-4 md:p-0">
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 bg-pure-black/80 backdrop-blur-md">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           <Link href="/" className="font-heading font-bold text-xl hover-underline flex items-center gap-2">
