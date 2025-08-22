@@ -46,7 +46,7 @@ export default function ContactForm() {
       // Add form fields
       const addField = (name: string, value: string) => {
         const input = document.createElement('input')
-        input.type = 'text'
+        input.type = 'hidden'
         input.name = name
         input.value = value
         form.appendChild(input)
