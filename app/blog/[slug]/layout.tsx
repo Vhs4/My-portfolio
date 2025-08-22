@@ -57,36 +57,27 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function BlogPostLayout({ children }: { children: React.ReactNode }) {
+export default function BlogPostLayout({ children, params }: { children: React.ReactNode, params: { slug: string } }) {
+  const post = getPostData(params.slug)
   return (
     <>
-      {/* JSON-LD Schema para SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            headline: "Post Title", // Seria dinâmico em uma aplicação real
-            description: "Post description",
+            headline: post.titulo,
+            description: post.resumo,
             author: {
               "@type": "Person",
-              name: "Victor Hugo",
+              name: post.autor,
               url: "https://vhs4.dev",
             },
-            publisher: {
-              "@type": "Organization",
-              name: "Victor Hugo",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://vhs4.dev/logo.webp",
-              },
-            },
-            datePublished: "2024-01-15",
-            dateModified: "2024-01-15",
+            datePublished: post.dataPublicacao,
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": "https://vhs4.dev/blog/post-slug",
+              "@id": `https://vhs4.dev/blog/${post.id}`,
             },
           }),
         }}
