@@ -129,72 +129,9 @@ export default function RootLayout({
       </head>
 
       <body className="font-sans">
-        {/* Security notice for developers */}
-        {process.env.NODE_ENV === 'development' && (
-          <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            backgroundColor: '#ff6b6b',
-            color: 'white',
-            padding: '5px 10px',
-            fontSize: '12px',
-            zIndex: 9999,
-            fontFamily: 'monospace'
-          }}>
-            DEV MODE - Security headers active
-          </div>
-        )}
 
         {children}
         <ProjectCalculatorChatbot />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Basic security monitoring
-              (function() {
-                // Monitor for console access attempts
-                let consoleWarning = false;
-                Object.defineProperty(console, '_commandLineAPI', {
-                  get: function() {
-                    if (!consoleWarning) {
-                      console.warn('🚨 Console access detected. This site is protected.');
-                      consoleWarning = true;
-                    }
-                    return undefined;
-                  }
-                });
-
-                // Monitor for DevTools
-                let devtools = false;
-                setInterval(function() {
-                  if (window.outerHeight - window.innerHeight > 200 || 
-                      window.outerWidth - window.innerWidth > 200) {
-                    if (!devtools) {
-                      console.warn('🔧 Developer tools detected.');
-                      devtools = true;
-                    }
-                  } else {
-                    devtools = false;
-                  }
-                }, 500);
-
-                // Disable common key combinations
-                document.addEventListener('keydown', function(e) {
-                  // Disable F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S
-                  if (e.key === 'F12' || 
-                      (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-                      (e.ctrlKey && e.key === 'u') ||
-                      (e.ctrlKey && e.key === 's')) {
-                    e.preventDefault();
-                    return false;
-                  }
-                });
-              })();
-            `,
-          }}
-        />
       </body>
     </html>
   )
