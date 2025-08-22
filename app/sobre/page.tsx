@@ -323,7 +323,10 @@ export default function SobrePage() {
                 </div>
               </div>
 
-              <Button size="lg" className="bg-royal-blue hover:bg-royal-blue-light text-pure-white font-body font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 cursor-pointer">
+              <Button size="lg" className="bg-royal-blue hover:bg-royal-blue-light text-pure-white font-body font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+                onClick={() => {
+                  window.open("/curriculo.pdf", "_blank");
+                }}>
                 <Download className="mr-2 h-5 w-5" />
                 Baixar CV
               </Button>

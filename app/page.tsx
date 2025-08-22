@@ -175,6 +175,9 @@ export default function HomePage() {
               variant="outline"
               size="lg"
               className="border-royal-blue text-royal-blue hover:bg-royal-blue hover:text-pure-white font-body font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 bg-transparent cursor-pointer"
+              onClick={() => {
+                window.open("/curriculo.pdf", "_blank");
+              }}
             >
               Baixar CV
             </Button>
