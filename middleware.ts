@@ -41,7 +41,7 @@ export function middleware(request: NextRequest) {
             "script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com",
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
             "img-src 'self' https: blob:",
-            "font-src 'self' https://fonts.gstatic.com",
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
             "connect-src 'self' https://api.anthropic.com",
             "media-src 'self' blob:",
             "object-src 'none'",
