@@ -369,7 +369,7 @@ Gostaria de agendar uma reuniao para discutir os detalhes e definir o escopo fin
                         <Bot className="w-8 h-8 text-blue-400" />
                         <h2 className="text-2xl font-bold text-white">Conversa com assistente - Análise de Projeto</h2>
                     </div>
-                    <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white transition-colors">
+                    <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                         <X className="w-6 h-6" />
                     </button>
                 </div>
