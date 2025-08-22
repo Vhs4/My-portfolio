@@ -72,12 +72,6 @@ export const metadata: Metadata = {
     yandex: "yandex-verification-code",
     yahoo: "yahoo-site-verification-code",
   },
-  generator: 'v0.app',
-  // Additional security metadata
-  other: {
-    'referrer': 'strict-origin-when-cross-origin',
-    'format-detection': 'telephone=no',
-  }
 }
 
 export default function RootLayout({
@@ -88,34 +82,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${spaceGrotesk.variable} ${dmSans.variable} antialiased`}>
       <head>
-        {/* Security Meta Tags */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-        {/* Prevent DNS prefetching for security */}
-        <meta httpEquiv="x-dns-prefetch-control" content="off" />
-
-        {/* Permissions Policy */}
-        <meta
-          httpEquiv="Permissions-Policy"
-          content="camera=(), microphone=(), geolocation=(), interest-cohort=(), payment=(), usb=()"
-        />
-
-        {/* Preload critical resources securely */}
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-          as="style"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
-          as="style"
-          crossOrigin="anonymous"
-        />
 
         {/* Structured Data with Security Context */}
         <script
@@ -153,7 +120,7 @@ export default function RootLayout({
                 "Web Security",
                 "Performance Optimization",
               ],
-              securityContact: "security@vhs4.dev",
+              securityContact: "contato@vhs4.dev",
             }),
           }}
         />
