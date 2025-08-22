@@ -394,7 +394,7 @@ export default function HomePage() {
 
       {/* About Section */}
       <section id="sobre" className="min-h-screen bg-pure-white text-pure-black flex items-center justify-center">
-        <div className="text-center max-w-6xl mx-auto px-6">
+        <div className="text-center max-w-6xl mx-auto px-6 mt-8 md:mt-0">
           <h2 className="font-heading font-bold text-5xl md:text-7xl mb-8">SOBRE MIM</h2>
           <p className="font-body text-xl leading-relaxed mb-8 max-w-4xl mx-auto">
             Desenvolvedor Full Stack de 20 anos, campeão regional do NASA Space Apps Challenge e Domain Leader of
@@ -430,7 +430,7 @@ export default function HomePage() {
 
           <Button
             size="lg"
-            className="bg-royal-blue hover:bg-royal-blue-light text-pure-white font-body font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105"
+            className="bg-royal-blue hover:bg-royal-blue-light text-pure-white font-body font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 mb-8 md:mb-0"
             asChild
           >
             <Link href="/sobre">
