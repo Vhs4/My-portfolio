@@ -305,9 +305,9 @@ export default function HomePage() {
                   <div className="text-sm text-gray-400">
                     <span className="text-royal-blue font-semibold">Campeão</span> Regional NASA
                   </div>
-                  {/* <Link href={"http://localhost:3000/"} className="cursor-pointer">
+                  <Link href={"https://www.spaceappschallenge.org/2023/find-a-team/triplice-soldiers/"} className="cursor-pointer">
                     <ExternalLink className="h-5 w-5 text-royal-blue group-hover:text-royal-blue-light transition-colors" />
-                  </Link> */}
+                  </Link>
                 </div>
               </div>
             </div>
@@ -346,9 +346,9 @@ export default function HomePage() {
                   <div className="text-sm text-gray-400">
                     <span className="text-royal-blue font-semibold">2º Lugar</span> Nacional
                   </div>
-                  {/* <Link href={"http://localhost:3000/"} className="cursor-pointer">
+                  <Link href={"https://www.linkedin.com/feed/update/urn:li:activity:7265471300293304320/"} className="cursor-pointer">
                     <ExternalLink className="h-5 w-5 text-royal-blue group-hover:text-royal-blue-light transition-colors" />
-                  </Link> */}
+                  </Link>
                 </div>
               </div>
             </div>
