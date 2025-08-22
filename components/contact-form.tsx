@@ -47,7 +47,7 @@ export default function ContactForm() {
       formDataToSend.append('_subject', 'Nova mensagem de contato via site')
       formDataToSend.append('_captcha', 'false')
 
-      const response = await fetch('https://formsubmit.co/contatovhs4@gmail.com', {
+      const response = await fetch('https://formsubmit.co/81f6904e5ad0e354738fec1f3f1e3872', {
         method: 'POST',
         body: formDataToSend,
       })
