@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     "Desenvolvedor Full Stack de 20 anos, liderei o time campeão regional do  NASA Space Apps Challenge. Transformo ideias em experiências digitais que impactam milhares de pessoas.",
   keywords:
     "victor hugo, desenvolvedor full stack, react, nextjs, nodejs, portfolio, blog, javascript, typescript, nasa space apps, aws certified, fully app",
+  icons: {
+    icon: "/fotoperfil.webp",
+    shortcut: "/fotoperfil.webp",
+  },
   authors: [{ name: "Victor Hugo" }],
   creator: "Victor Hugo",
   publisher: "Victor Hugo",
@@ -43,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Victor Hugo Portfolio",
     images: [
       {
-        url: "/og-image.png",
+        url: "/fotoperfil.webp",
         width: 1200,
         height: 630,
         alt: "Victor Hugo - Desenvolvedor Full Stack",
