@@ -152,7 +152,7 @@ export default function HomePage() {
               }`}
           >
             <p className="font-body text-xl md:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Aos 20 anos, já <span className="text-royal-blue font-semibold">liderei o time campeão regional do  NASA Space Apps Challenge</span> e além disse já impactei +50 mil pessoas. Transformo ideias em experiências digitais que impactam milhares de vidas.
+              Aos 20 anos, já <span className="text-royal-blue font-semibold">liderei o time campeão regional do  NASA Space Apps Challenge</span> e além disso já impactei +50 mil pessoas. Transformo ideias em experiências digitais que impactam milhares de vidas.
             </p>
           </div>
 
