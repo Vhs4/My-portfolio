@@ -91,7 +91,7 @@ export default function ContactForm() {
             </div>
             <div>
               <p className="font-body font-semibold text-white">Email</p>
-              <Link href="mailto:contatovhs4@gmail.com" className="font-body cursor-pointer text-gray-300">contatovhs4@gmail.com</Link>
+              <Link href="mailto:contato@vhs4.dev" className="font-body cursor-pointer text-gray-300">contato@vhs4.dev</Link>
             </div>
           </div>
 
