@@ -111,17 +111,11 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center gap-6">
-              <Link href="/privacy" className="font-body text-gray-400 hover:text-royal-blue text-sm transition-colors">
-                Privacidade
-              </Link>
-              <Link href="/terms" className="font-body text-gray-400 hover:text-royal-blue text-sm transition-colors">
-                Termos
-              </Link>
               <Button
                 onClick={scrollToTop}
                 size="sm"
                 variant="outline"
-                className="border-royal-blue/30 text-royal-blue hover:bg-royal-blue hover:text-white bg-transparent"
+                className="border-royal-blue/30 text-royal-blue hover:bg-royal-blue hover:text-white bg-transparent cursor-pointer"
               >
                 <ArrowUp className="h-4 w-4" />
               </Button>
