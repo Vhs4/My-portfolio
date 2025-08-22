@@ -16,24 +16,6 @@ const nextConfig = {
         // Apply headers to all routes
         source: '/(.*)',
         headers: [
-          // Content Security Policy (CSP)
-          {
-            key: 'Content-Security-Policy',
-            value: [
-              "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com",
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com",
-              "img-src 'self' data: blob: https: http:",
-              "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com",
-              "connect-src 'self' https://api.anthropic.com https://www.google-analytics.com https://vitals.vercel-analytics.com https://formsubmit.co",
-              "form-action 'self' https://formsubmit.co",
-              "media-src 'self' data: blob:",
-              "object-src 'none'",
-              "base-uri 'self'",
-              "frame-ancestors 'none'",
-              "upgrade-insecure-requests"
-            ].join('; ')
-          },
           // X-Content-Type-Options
           {
             key: 'X-Content-Type-Options',
