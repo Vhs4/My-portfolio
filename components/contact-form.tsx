@@ -35,7 +35,7 @@ export default function ContactForm() {
 
     try {
       // FormSubmit endpoint
-      const formSubmitEmail = "81f6904e5ad0e354738fec1f3f1e3872"
+      const formSubmitEmail = "contatovhs4@gmail.com"
 
       // Create a hidden form and submit it (this avoids CORS issues)
       const form = document.createElement('form')
