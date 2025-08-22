@@ -448,8 +448,8 @@ export default function HomePage() {
       >
         <div className="max-w-6xl mx-auto px-6 w-full">
           <div className="text-center mb-20">
-            <h2 className="font-heading font-bold text-5xl md:text-7xl mb-8 text-royal-blue">VAMOS CRIAR ALGO</h2>
-            <h2 className="font-heading font-bold text-5xl md:text-7xl mb-12">EXTRAORDINÁRIO JUNTOS?</h2>
+            <h2 className="font-heading font-bold text-4xl sm:text-5xl md:text-7xl mb-8 text-royal-blue">VAMOS CRIAR ALGO</h2>
+            <h2 className="font-heading font-bold text-4xl sm:text-5xl md:text-7xl mb-12">EXTRAORDINÁRIO JUNTOS?</h2>
             <p className="font-body text-xl leading-relaxed text-gray-300 max-w-3xl mx-auto">
               Tem um projeto em mente? Vamos conversar sobre como posso ajudar a transformar sua ideia em realidade.
             </p>
