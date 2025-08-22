@@ -50,6 +50,7 @@ const projetos = [
       "Liderei o desenvolvimento front-end de um sistema de gestão de restaurantes em um projeto acadêmico em parceria com o Ifood na minha graduação, o design foi inspirado no Ifood, com foco em usabilidade, performance e recursos de monitoramento em tempo real.",
     imagem: "/ifood-erp.webp",
     tecnologias: ["React", "TypeScript", "JavaScript", "Tailwind CSS", "HTML", "CSS"],
+    externalLink: "https://www.linkedin.com/feed/update/urn:li:activity:7208981105004228610",
     categoria: "Sistema Web",
     ano: "2024",
     duracao: "",
@@ -58,19 +59,20 @@ const projetos = [
     cor: "from-red-500 to-yellow-500"
   },
   {
-    "id": "esphera-glamping",
-    "titulo": "Esphera Glamping",
-    "subtitulo": "Site institucional multilíngue para glamping de luxo",
-    "descricao":
+    id: "esphera-glamping",
+    titulo: "Esphera Glamping",
+    subtitulo: "Site institucional multilíngue para glamping de luxo",
+    descricao:
       "Desenvolvimento de um site moderno para o Esphera Glamping, o maior glamping com domos geodésicos do Brasil. O projeto foi construído em WordPress com Elementor Pro, totalmente responsivo e otimizado para SEO, com versões em Português, Inglês e Espanhol. O objetivo foi transmitir a exclusividade da experiência de hospedagem, destacando as Espheras, experiências gastronômicas, spa, e eventos. Além disso, foram aplicados recursos visuais imersivos com imagens de alta qualidade e navegação fluida para aumentar o engajamento dos visitantes e facilitar o processo de conversão.",
-    "imagem": "/esphera-glamping-hero.webp",
-    "tecnologias": ["WordPress", "Elementor Pro", "PHP", "HTML", "CSS"],
-    "categoria": "Web",
-    "ano": "2025",
-    "duracao": "",
-    "equipe": "4 pessoas",
-    "status": "No ar",
-    "cor": "bg-red-950"
+    imagem: "/esphera-glamping-hero.webp",
+    tecnologias: ["WordPress", "Elementor Pro", "PHP", "HTML", "CSS"],
+    externalLink: "https://espheraglamping.com.br/",
+    categoria: "Web",
+    ano: "2025",
+    duracao: "",
+    equipe: "4 pessoas",
+    status: "No ar",
+    cor: "bg-red-950"
   }
 
 ]
