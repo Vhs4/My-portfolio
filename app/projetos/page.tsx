@@ -181,7 +181,7 @@ export default function ProjetosPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="font-heading font-bold text-6xl md:text-8xl mb-6 md:animate-kinetic-text">
+          <h1 className="font-heading font-bold text-6xl md:text-8xl mb-6 animate-kinetic-text">
             <span className="block">ALGUNS DOS MEUS</span>
             <span className="block text-royal-blue">PROJETOS</span>
           </h1>
@@ -235,8 +235,21 @@ export default function ProjetosPage() {
                       </Badge>
                     </div>
 
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-royal-blue/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    {/* Mobile Action Button - Always visible */}
+                    <div className="md:hidden absolute bottom-4 right-4">
+                      <Button
+                        size="sm"
+                        className="bg-royal-blue hover:bg-royal-blue-light text-white font-semibold shadow-lg"
+                        asChild
+                      >
+                        <Link href={`/projetos/${projeto.id}`}>
+                          Ver Detalhes
+                        </Link>
+                      </Button>
+                    </div>
+
+                    {/* Desktop Hover Overlay */}
+                    <div className="hidden md:flex absolute inset-0 bg-royal-blue/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 items-center justify-center">
                       <div className="text-center">
                         <Button
                           size="lg"
@@ -248,7 +261,7 @@ export default function ProjetosPage() {
                             <ExternalLink className="ml-2 h-5 w-5" />
                           </Link>
                         </Button>
-                        {projeto.codeLink || projeto.externalLink && (
+                        {(projeto.codeLink || projeto.externalLink) && (
                           <div className="flex gap-4 justify-center">
                             {projeto.codeLink && (
                               <Button
@@ -289,9 +302,11 @@ export default function ProjetosPage() {
                       <span className="font-body text-sm text-gray-400">{projeto.equipe}</span>
                     </div>
 
-                    <h3 className="font-heading font-bold text-2xl mb-2 group-hover:text-royal-blue transition-colors duration-300">
-                      {projeto.titulo}
-                    </h3>
+                    <Link href={`/projetos/${projeto.id}`}>
+                      <h3 className="font-heading font-bold text-2xl mb-2 group-hover:text-royal-blue transition-colors duration-300">
+                        {projeto.titulo}
+                      </h3>
+                    </Link>
                     <p className="font-body text-royal-blue-light mb-4">{projeto.subtitulo}</p>
                     <p className="font-body text-gray-300 leading-relaxed mb-6">{projeto.descricao}</p>
 
@@ -321,6 +336,36 @@ export default function ProjetosPage() {
                         {projeto.status}
                       </Badge>
                       <span className="font-body text-sm text-gray-400">{projeto.duracao}</span>
+                    </div>
+
+                    {/* Mobile External Links */}
+                    <div className="md:hidden mt-6 flex gap-3 justify-start">
+                      {projeto.codeLink && (
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="border-royal-blue text-royal-blue hover:bg-royal-blue hover:text-white"
+                          asChild
+                        >
+                          <Link href={projeto.codeLink}>
+                            <Github className="h-4 w-4 mr-2" />
+                            Código
+                          </Link>
+                        </Button>
+                      )}
+                      {projeto.externalLink && (
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="border-royal-blue text-royal-blue hover:bg-royal-blue hover:text-white"
+                          asChild
+                        >
+                          <Link href={projeto.externalLink} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            Site
+                          </Link>
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </div>

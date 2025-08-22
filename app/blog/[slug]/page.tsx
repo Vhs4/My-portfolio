@@ -25,13 +25,13 @@ import { carreiraDesenvolvedorPost } from "../posts/carreira-desenvolvedor"
 import { performanceWeb2025Post } from "../posts/performance-web-2025"
 import { reactServerComponentsPost } from "../posts/react-server-components"
 import NewsletterBlog from "@/components/newsletter-blog"
-import { aprenderInglesHeroData } from "../posts/aprender-ingles-2025";
+import { aprenderInglesPost } from "../posts/aprender-ingles-2025";
 
 const postsDetalhados = {
   "carreira-desenvolvedor-2025": carreiraDesenvolvedorPost,
   "performance-web-2025": performanceWeb2025Post,
   "react-server-components": reactServerComponentsPost,
-  "aprender-ingles-2025": aprenderInglesHeroData
+  "aprender-ingles-2025": aprenderInglesPost
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
