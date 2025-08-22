@@ -300,7 +300,7 @@ export default function SobrePage() {
               </h1>
 
               <p className="font-body text-xl md:text-2xl text-royal-blue-light mb-6">
-                Desenvolvedor Full Stack, liderei o time campeão regional do  NASA Space Apps Challenge e hoje na Fully +50 mil pessoas
+                Desenvolvedor Full Stack, liderei o time campeão regional do  NASA Space Apps Challenge e hoje na Fully impacto a vida de +50 mil pessoas
               </p>
 
               <p className="font-body text-lg text-gray-300 leading-relaxed mb-8">
