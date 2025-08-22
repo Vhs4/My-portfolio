@@ -34,36 +34,53 @@ export default function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // Criar FormData para envio
-      const formDataToSend = new FormData()
-      formDataToSend.append('name', formData.nome)
-      formDataToSend.append('email', formData.email)
-      formDataToSend.append('company', formData.empresa)
-      formDataToSend.append('subject', formData.assunto)
-      formDataToSend.append('message', formData.mensagem)
+      // FormSubmit endpoint
+      const formSubmitEmail = "81f6904e5ad0e354738fec1f3f1e3872"
 
-      // Campos ocultos do FormSubmit
-      formDataToSend.append('_next', '#')
-      formDataToSend.append('_subject', 'Nova mensagem de contato via site')
-      formDataToSend.append('_captcha', 'false')
+      // Create a hidden form and submit it (this avoids CORS issues)
+      const form = document.createElement('form')
+      form.method = 'POST'
+      form.action = `https://formsubmit.co/${formSubmitEmail}`
+      form.style.display = 'none'
 
-      const response = await fetch('https://formsubmit.co/81f6904e5ad0e354738fec1f3f1e3872', {
-        method: 'POST',
-        body: formDataToSend,
-      })
-
-      if (response.ok) {
-        setSubmitStatus("success")
-        setFormData({
-          nome: "",
-          email: "",
-          empresa: "",
-          assunto: "",
-          mensagem: "",
-        })
-      } else {
-        setSubmitStatus("error")
+      // Add form fields
+      const addField = (name: string, value: string) => {
+        const input = document.createElement('input')
+        input.type = 'text'
+        input.name = name
+        input.value = value
+        form.appendChild(input)
       }
+
+      // Main fields
+      addField('name', formData.nome)
+      addField('email', formData.email)
+      addField('company', formData.empresa)
+      addField('subject', formData.assunto)
+      addField('message', formData.mensagem)
+
+      // FormSubmit configuration
+      addField('_subject', 'Nova mensagem de contato via site')
+      addField('_captcha', 'false')
+      addField('_autoresponse', 'Obrigado por entrar em contato! Responderei em breve.')
+      addField('_template', 'box')
+
+      // Add ajax field to get response in same page
+      addField('_next', window.location.href)
+
+      // Append to body and submit
+      document.body.appendChild(form)
+      form.submit()
+
+      // Set success status and reset form
+      setSubmitStatus("success")
+      setFormData({
+        nome: "",
+        email: "",
+        empresa: "",
+        assunto: "",
+        mensagem: "",
+      })
     } catch (error) {
       console.error('Erro ao enviar formulário:', error)
       setSubmitStatus("error")
