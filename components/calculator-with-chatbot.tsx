@@ -344,7 +344,7 @@ Gostaria de agendar uma reuniao para discutir os detalhes e definir o escopo fin
         return (
             <button
                 onClick={() => setIsOpen(true)}
-                className="cursor-pointer fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 z-50 group"
+                className="cursor-pointer fixed bottom-14 right-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 z-50 group"
             >
                 <Bot className="w-6 h-6" />
                 <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-100 group-hover:opacity-0 transition-opacity">
