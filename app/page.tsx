@@ -7,7 +7,6 @@ import Link from "next/link"
 import ContactForm from "@/components/contact-form"
 import Footer from "@/components/footer"
 import Image from "next/image"
-import ProjectCalculatorChatbot from "@/components/calculator-with-chatbot"
 
 export default function HomePage() {
   const [scrollY, setScrollY] = useState(0)
@@ -33,7 +32,8 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-pure-black text-pure-white overflow-x-hidden">
-      <nav className="fixed top-0 left-0 right-0 z-50 p-6 backdrop-blur-md">
+      <nav className={`fixed top-0 left-0 right-0 z-50 p-6 transition-all duration-300 ${scrollY > 10 ? "backdrop-blur-md bg-pure-black/80" : "bg-transparent"
+        }`}>
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           <a href="/" className="font-heading font-bold text-xl hover-underline">
             VHS4
