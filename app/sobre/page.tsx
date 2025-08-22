@@ -119,7 +119,7 @@ const experiencias = [
     tecnologias: [
       { nome: "React", cor: "bg-cyan-500", icon: "⚛️" },
       { nome: "Python", cor: "bg-yellow-600", icon: "🐍" },
-      { nome: "MVP Rede social", cor: "bg-blue-600", icon: "🚀" },
+      { nome: "MVP Rede social para cientistas", cor: "bg-blue-600", icon: "🚀" },
       { nome: "Liderança", cor: "bg-green-600", icon: "🎯" },
     ],
   },
