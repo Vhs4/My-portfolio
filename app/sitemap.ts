@@ -29,19 +29,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/projetos/ecommerce-ai`,
+      url: `${baseUrl}/projetos/react-server-components`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/projetos/dashboard-analytics`,
+      url: `${baseUrl}/projetos/aprender-ingles-2025`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/blog/nextjs-15-novidades`,
+      url: `${baseUrl}/projetos/carreira-desenvolvedor-2025`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/performance-web-2025`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.6,
