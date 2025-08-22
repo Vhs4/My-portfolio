@@ -43,7 +43,6 @@ const nextConfig = {
               'camera=()',
               'microphone=()',
               'geolocation=()',
-              'interest-cohort=()',
               'payment=()',
               'usb=()'
             ].join(', ')
