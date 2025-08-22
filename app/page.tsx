@@ -33,7 +33,7 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-pure-black text-pure-white overflow-x-hidden">
-      <nav className="fixed top-0 left-0 right-0 z-50 p-6">
+      <nav className="fixed top-0 left-0 right-0 z-50 p-6 backdrop-blur-md">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           <a href="/" className="font-heading font-bold text-xl hover-underline">
             VHS4

@@ -79,6 +79,15 @@ export default function ProjetosPage() {
   const [scrollY, setScrollY] = useState(0)
   const [hoveredProject, setHoveredProject] = useState<string | null>(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -172,7 +181,7 @@ export default function ProjetosPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="font-heading font-bold text-6xl md:text-8xl mb-6 animate-kinetic-text">
+          <h1 className="font-heading font-bold text-6xl md:text-8xl mb-6 md:animate-kinetic-text">
             <span className="block">ALGUNS DOS MEUS</span>
             <span className="block text-royal-blue">PROJETOS</span>
           </h1>
@@ -194,11 +203,14 @@ export default function ProjetosPage() {
                 onMouseEnter={() => setHoveredProject(projeto.id)}
                 onMouseLeave={() => setHoveredProject(null)}
                 style={{
-                  transform: `translateY(${scrollY * 0.1 * (index % 2 === 0 ? 1 : -1)}px)`,
+                  transform: !isMobile
+                    ? `translateY(${scrollY * 0.1 * (index % 2 === 0 ? 1 : -1)}px)`
+                    : "none",
                 }}
+
               >
                 {/* Project Card */}
-                <div className="bg-deep-gray rounded-2xl overflow-hidden border border-transparent group-hover:border-royal-blue transition-all duration-500 tilt-effect">
+                <div className="bg-deep-gray rounded-2xl overflow-hidden border border-transparent group-hover:border-royal-blue transition-all duration-500 md:tilt-effect">
                   {/* Project Image */}
                   <div className="relative h-80 overflow-hidden">
                     <div
@@ -208,15 +220,16 @@ export default function ProjetosPage() {
                       src={projeto.imagem || "/placeholder.svg"}
                       alt={projeto.titulo}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                      className={`object-cover transition-transform duration-700 ${!isMobile ? "group-hover:scale-110" : ""
+                        }`}
                     />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-black/20 md:group-hover:bg-black/10 transition-colors duration-500" />
 
                     {/* Floating Badge */}
                     <div className="absolute top-4 right-4">
                       <Badge
                         variant="secondary"
-                        className={`bg-gradient-to-r ${projeto.cor} text-white border-0 animate-float`}
+                        className={`bg-gradient-to-r ${projeto.cor} text-white border-0 md:animate-float`}
                       >
                         {projeto.categoria}
                       </Badge>
