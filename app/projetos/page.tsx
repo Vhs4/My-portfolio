@@ -122,7 +122,7 @@ export default function ProjetosPage() {
             <Link href="/blog" className="font-body hover-underline">
               Blog
             </Link>
-            <Link href="/#contato" className="font-body hover-underline">
+            <Link href="https://wa.me/+5522999018809?text=Ol%C3%A1%2C+vim+pelo+seu+site+e+gostaria+de+conversar+sobre+um+projeto" className="font-body hover-underline">
               Contato
             </Link>
           </div>
@@ -168,7 +168,7 @@ export default function ProjetosPage() {
               Blog
             </a>
             <a
-              href="/#contato"
+              href="https://wa.me/+5522999018809?text=Ol%C3%A1%2C+vim+pelo+seu+site+e+gostaria+de+conversar+sobre+um+projeto"
               onClick={closeMenu}
               className="block font-body hover-underline py-2"
             >
@@ -387,7 +387,7 @@ export default function ProjetosPage() {
             className="bg-royal-blue hover:bg-royal-blue-light text-pure-white font-body font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105"
             asChild
           >
-            <Link href="/#contato">
+            <Link href="https://wa.me/+5522999018809?text=Ol%C3%A1%2C+vim+pelo+seu+site+e+gostaria+de+conversar+sobre+um+projeto">
               Iniciar Conversa
               <ExternalLink className="ml-2 h-5 w-5" />
             </Link>

@@ -99,7 +99,7 @@ export default function BlogPage() {
             <Link href="/blog" className="font-body hover-underline text-royal-blue">
               Blog
             </Link>
-            <Link href="/#contato" className="font-body hover-underline">
+            <Link href="https://wa.me/+5522999018809?text=Ol%C3%A1%2C+vim+pelo+seu+site+e+gostaria+de+conversar+sobre+um+projeto" className="font-body hover-underline">
               Contato
             </Link>
           </div>
@@ -146,7 +146,7 @@ export default function BlogPage() {
               Blog
             </a>
             <a
-              href="/#contato"
+              href="https://wa.me/+5522999018809?text=Ol%C3%A1%2C+vim+pelo+seu+site+e+gostaria+de+conversar+sobre+um+projeto"
               onClick={closeMenu}
               className="block font-body hover-underline py-2"
             >

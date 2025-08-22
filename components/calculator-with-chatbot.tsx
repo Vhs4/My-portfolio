@@ -513,7 +513,7 @@ Gostaria de agendar uma reuniao para discutir os detalhes e definir o escopo fin
                                 <button
                                     onClick={handleSendMessage}
                                     disabled={!currentMessage.trim() || isCalculating || isTyping}
-                                    className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white p-3 rounded-lg transition-colors"
+                                    className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white p-3 rounded-lg transition-colors disabled:cursor-not-allowed cursor-pointer"
                                 >
                                     <Send className="w-4 h-4" />
                                 </button>

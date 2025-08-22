@@ -58,7 +58,7 @@ export default function NotFound() {
             <Link href="/blog" className="font-body text-royal-blue hover:text-royal-blue-light hover-underline">
               Blog
             </Link>
-            <Link href="/#contato" className="font-body text-royal-blue hover:text-royal-blue-light hover-underline">
+            <Link href="https://wa.me/+5522999018809?text=Ol%C3%A1%2C+vim+pelo+seu+site+e+gostaria+de+conversar+sobre+um+projeto" className="font-body text-royal-blue hover:text-royal-blue-light hover-underline">
               Contato
             </Link>
           </div>

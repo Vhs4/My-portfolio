@@ -50,7 +50,7 @@ export default function HomePage() {
             <a href="/blog" className="font-body hover-underline">
               Blog
             </a>
-            <a href="#contato" className="font-body hover-underline">
+            <a href="https://wa.me/+5522999018809?text=Ol%C3%A1%2C+vim+pelo+seu+site+e+gostaria+de+conversar+sobre+um+projeto" className="font-body hover-underline">
               Contato
             </a>
           </div>
@@ -97,7 +97,7 @@ export default function HomePage() {
               Blog
             </a>
             <a
-              href="#contato"
+              href="https://wa.me/+5522999018809?text=Ol%C3%A1%2C+vim+pelo+seu+site+e+gostaria+de+conversar+sobre+um+projeto"
               onClick={closeMenu}
               className="block font-body hover-underline py-2"
             >
