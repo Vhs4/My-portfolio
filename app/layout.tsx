@@ -17,11 +17,11 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Victor Hugo - Desenvolvedor Full Stack | Portfólio & Blog",
+  title: "Victor Hugo Campos - Desenvolvedor Full Stack | Portfólio & Blog",
   description:
     "Desenvolvedor Full Stack de 20 anos, liderei o time campeão regional do NASA Space Apps Challenge. Transformo ideias em experiências digitais que impactam milhares de pessoas.",
   keywords:
-    "victor hugo, desenvolvedor full stack, react, nextjs, nodejs, portfolio, blog, javascript, typescript, nasa space apps, aws certified, fully app",
+    "victor hugo, victor hugo campos, vhs4, victor vhs4, victor hugo vhs4, victor hugo campos vhs4, vhs4 dev, victor hugo dev, victor hugo campos dev, victor hugo desenvolvedor, victor hugo campos desenvolvedor, desenvolvedor full stack, react, nextjs, nodejs, portfolio, blog, javascript, typescript, nasa space apps, aws certified",
   icons: {
     icon: "/fotoperfil.webp",
     shortcut: "/fotoperfil.webp",
@@ -42,15 +42,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://vhs4.dev",
-    title: "Victor Hugo - Desenvolvedor Full Stack",
+    title: "Victor Hugo Campos - Desenvolvedor Full Stack",
     description: "liderei o time campeão regional do NASA Space Apps Challenge aos 18 anos. Código que transforma o futuro.",
-    siteName: "Victor Hugo Portfolio",
+    siteName: "Victor Hugo Campos Portfolio",
     images: [
       {
         url: "/fotoperfil.webp",
         width: 1200,
         height: 630,
-        alt: "Victor Hugo - Desenvolvedor Full Stack",
+        alt: "Victor Hugo Campos - Desenvolvedor Full Stack",
       },
     ],
   },
@@ -83,22 +83,20 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${spaceGrotesk.variable} ${dmSans.variable} antialiased`}>
       <head>
 
-
-        {/* Structured Data with Security Context */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Victor Hugo",
+              name: "Victor Hugo Campos",
               jobTitle: "Desenvolvedor Full Stack",
               description:
                 "Desenvolvedor Full Stack de 20 anos, liderei o time campeão regional do NASA Space Apps Challenge e especialista em transformar ideias em soluções tecnológicas de impacto global.",
               url: "https://vhs4.dev",
               sameAs: [
-                "https://github.com/victorhugo",
-                "https://linkedin.com/in/victorhugo",
+                "https://github.com/vhs4",
+                "https://linkedin.com/in/vhs4",
               ],
               address: {
                 "@type": "PostalAddress",
