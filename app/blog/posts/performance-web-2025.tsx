@@ -10,7 +10,7 @@ export const performanceWeb2025HeroData = {
   tempoLeitura: "18 min",
   categoria: "Performance",
   tags: ["Performance", "Otimização", "Web", "UX"],
-  featured: true,
+  featured: false,
 }
 
 export const performanceWeb2025Post = {

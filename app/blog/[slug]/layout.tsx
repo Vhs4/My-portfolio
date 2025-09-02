@@ -4,13 +4,15 @@ import { carreiraDesenvolvedorHeroData } from "../posts/carreira-desenvolvedor"
 import { performanceWeb2025HeroData } from "../posts/performance-web-2025"
 import { reactServerComponentsHeroData } from "../posts/react-server-components"
 import { aprenderInglesHeroData } from "../posts/aprender-ingles-2025"
+import { liderancaNaTecnologiaHeroData } from "../posts/lideranca-na-tecnologia"
 
 function getPostData(slug: string) {
   const posts = {
     "carreira-desenvolvedor-2025": carreiraDesenvolvedorHeroData,
     "performance-web-2025": performanceWeb2025HeroData,
     "react-server-components": reactServerComponentsHeroData,
-    "aprender-ingles-2025": aprenderInglesHeroData
+    "aprender-ingles-2025": aprenderInglesHeroData,
+    "lideranca-na-tecnologia-2025": liderancaNaTecnologiaHeroData,
   }
 
   return posts[slug as keyof typeof posts]

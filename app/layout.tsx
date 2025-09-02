@@ -100,7 +100,7 @@ export default function RootLayout({
               ],
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "São Paulo",
+                addressLocality: "Campos dos Goytacazes, RJ",
                 addressCountry: "BR",
               },
               email: "contato@vhs4.dev",

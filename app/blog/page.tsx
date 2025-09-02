@@ -12,12 +12,14 @@ import { carreiraDesenvolvedorHeroData } from "./posts/carreira-desenvolvedor"
 import { performanceWeb2025HeroData } from "./posts/performance-web-2025"
 import { reactServerComponentsHeroData } from "./posts/react-server-components"
 import { aprenderInglesHeroData } from "./posts/aprender-ingles-2025"
+import { liderancaNaTecnologiaHeroData } from "./posts/lideranca-na-tecnologia"
 
 const posts = [
   carreiraDesenvolvedorHeroData,
   performanceWeb2025HeroData,
   reactServerComponentsHeroData,
-  aprenderInglesHeroData
+  aprenderInglesHeroData,
+  liderancaNaTecnologiaHeroData
 ]
 
 const categorias = [

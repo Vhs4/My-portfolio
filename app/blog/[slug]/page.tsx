@@ -25,12 +25,14 @@ import { reactServerComponentsPost } from "../posts/react-server-components"
 import NewsletterBlog from "@/components/newsletter-blog"
 import { aprenderInglesPost } from "../posts/aprender-ingles-2025";
 import MarkdownRenderer, { isMenuOpenFunction, useScrollProgress } from "./blog-slug-utils";
+import { liderancaNaTecnologiaPost } from "../posts/lideranca-na-tecnologia"
 
 const postsDetalhados = {
   "carreira-desenvolvedor-2025": carreiraDesenvolvedorPost,
   "performance-web-2025": performanceWeb2025Post,
   "react-server-components": reactServerComponentsPost,
-  "aprender-ingles-2025": aprenderInglesPost
+  "aprender-ingles-2025": aprenderInglesPost,
+  "lideranca-na-tecnologia-2025": liderancaNaTecnologiaPost,
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
