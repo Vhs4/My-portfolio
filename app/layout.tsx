@@ -3,8 +3,7 @@ import type { Metadata } from "next"
 import { Space_Grotesk, DM_Sans } from "next/font/google"
 import "./globals.css"
 import ProjectCalculatorChatbot from "@/components/calculator-with-chatbot"
-import { useEffect } from "react"
-import { initClarity } from "@/lib/clarity"
+import ClarityClient from "@/lib/clarity"
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -81,14 +80,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  useEffect(() => {
-    initClarity();
-  }, []);
-
   return (
     <html lang="pt-BR" className={`${spaceGrotesk.variable} ${dmSans.variable} antialiased`}>
       <head>
-
+        <ClarityClient />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
