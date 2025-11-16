@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import { Space_Grotesk, DM_Sans } from "next/font/google"
 import "./globals.css"
 import ProjectCalculatorChatbot from "@/components/calculator-with-chatbot"
+import { useEffect } from "react"
+import { initClarity } from "@/lib/clarity"
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -79,6 +81,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  useEffect(() => {
+    initClarity();
+  }, []);
+
   return (
     <html lang="pt-BR" className={`${spaceGrotesk.variable} ${dmSans.variable} antialiased`}>
       <head>
@@ -124,15 +130,6 @@ export default function RootLayout({
         />
 
         <link rel="canonical" href="https://vhs4.dev" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "u5kswen59t");`,
-          }}
-        />
       </head>
 
       <body className="font-sans">
