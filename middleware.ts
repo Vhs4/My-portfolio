@@ -38,11 +38,11 @@ export function middleware(request: NextRequest) {
         // Content Security Policy (more restrictive for sensitive pages)
         'Content-Security-Policy': [
             "default-src 'self'",
-            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com",
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.clarity.ms https://c.clarity.ms",
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-            "img-src 'self' data: blob: https:",
+            "img-src 'self' data: blob: https: https://www.clarity.ms https://c.clarity.ms",
             "font-src 'self' https://fonts.gstatic.com",
-            "connect-src 'self' https://api.anthropic.com",
+            "connect-src 'self' https://api.anthropic.com https://www.clarity.ms https://c.clarity.ms",
             "media-src 'self' data: blob:",
             "object-src 'none'",
             "base-uri 'self'",
