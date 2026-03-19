@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victor Hugo Campos — Perfil & Identidade Visual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --royal-blue: #0057FF;
+      --royal-blue-light: #66A3FF;
+      --deep-gray: #1A1A1A;
+      --pure-black: #000000;
+      --pure-white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--pure-black);
+      color: var(--pure-white);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ── COVER ────────────────────────────────────────── */
+    .cover {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 72px;
+      position: relative;
+      background: var(--pure-black);
+      page-break-after: always;
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 45%;
+      height: 100%;
+      background: radial-gradient(ellipse at top right, rgba(0,87,255,0.18) 0%, transparent 70%);
+    }
+
+    .cover-tag {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--royal-blue-light);
+      margin-bottom: 48px;
+    }
+
+    .cover h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 80px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .cover h1 .blue { color: var(--royal-blue); }
+    .cover h1 .light { color: var(--royal-blue-light); }
+
+    .cover-subtitle {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      color: #9ca3af;
+      margin-top: 32px;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    .cover-meta {
+      margin-top: 64px;
+      display: flex;
+      gap: 40px;
+    }
+
+    .cover-meta-item .label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+
+    .cover-meta-item .value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--pure-white);
+    }
+
+    .cover-divider {
+      width: 48px;
+      height: 3px;
+      background: var(--royal-blue);
+      margin: 40px 0;
+    }
+
+    .cover-footer {
+      position: absolute;
+      bottom: 48px;
+      left: 72px;
+      right: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #1f1f1f;
+      padding-top: 24px;
+    }
+
+    .cover-footer span {
+      font-size: 12px;
+      color: #4b5563;
+    }
+
+    .cover-footer .brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--royal-blue);
+    }
+
+    /* ── PAGES ────────────────────────────────────────── */
+    .page {
+      padding: 72px;
+      page-break-after: always;
+      background: var(--pure-black);
+      min-height: 100vh;
+    }
+
+    .page-white {
+      background: var(--pure-white);
+      color: var(--pure-black);
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--royal-blue);
+      margin-bottom: 12px;
+    }
+
+    .section-label-dark {
+      color: var(--royal-blue-light);
+    }
+
+    .page h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.05;
+      margin-bottom: 8px;
+    }
+
+    .page-white h2 { color: var(--pure-black); }
+
+    .h2-accent { color: var(--royal-blue); }
+
+    .section-divider {
+      width: 40px;
+      height: 3px;
+      background: var(--royal-blue);
+      margin: 24px 0 40px;
+    }
+
+    /* ── BIO ──────────────────────────────────────────── */
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .bio-body {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #d1d5db;
+    }
+
+    .bio-body strong { color: var(--pure-white); }
+
+    .bio-body-dark {
+      color: #374151;
+    }
+    .bio-body-dark strong { color: var(--pure-black); }
+
+    .highlight-box {
+      border-left: 3px solid var(--royal-blue);
+      padding-left: 20px;
+      margin: 24px 0;
+    }
+
+    .highlight-box p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #9ca3af;
+    }
+    .highlight-box p strong { color: var(--royal-blue-light); }
+
+    /* ── STATS ────────────────────────────────────────── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin: 48px 0;
+    }
+
+    .stat-card {
+      background: var(--deep-gray);
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    .stat-card .number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--royal-blue);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-card .desc {
+      font-size: 12px;
+      color: #9ca3af;
+      line-height: 1.4;
+    }
+
+    /* ── TIMELINE ────────────────────────────────────── */
+    .timeline {
+      position: relative;
+      padding-left: 24px;
+      border-left: 2px solid #1f2937;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -32px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--royal-blue);
+      border: 2px solid var(--pure-black);
+    }
+
+    .timeline-item .year {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--royal-blue-light);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--pure-white);
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      font-size: 13px;
+      color: #9ca3af;
+      line-height: 1.6;
+    }
+
+    .timeline-item .badge {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: rgba(0,87,255,0.15);
+      color: var(--royal-blue-light);
+      border: 1px solid rgba(0,87,255,0.3);
+      margin-top: 10px;
+    }
+
+    /* ── PROJECTS ─────────────────────────────────────── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .project-card {
+      background: var(--deep-gray);
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .project-card .project-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--royal-blue-light);
+      margin-bottom: 12px;
+    }
+
+    .project-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 12px;
+      color: #9ca3af;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .project-result {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--royal-blue);
+    }
+
+    .project-result-label {
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    /* ── IDENTITY GUIDE ──────────────────────────────── */
+    .palette-row {
+      display: flex;
+      gap: 16px;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+
+    .swatch {
+      flex: 1;
+      min-width: 120px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #1f2937;
+    }
+
+    .swatch-color {
+      height: 80px;
+    }
+
+    .swatch-info {
+      padding: 12px 14px;
+      background: var(--deep-gray);
+    }
+
+    .swatch-info .color-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .swatch-info .color-hex {
+      font-size: 11px;
+      color: #9ca3af;
+      font-family: monospace;
+    }
+
+    .swatch-info .color-role {
+      font-size: 10px;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+
+    .type-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 40px 0;
+    }
+
+    .type-card {
+      background: var(--deep-gray);
+      border-radius: 12px;
+      padding: 28px;
+      border: 1px solid #1f2937;
+    }
+
+    .type-card .font-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .type-card .font-name {
+      font-size: 13px;
+      color: var(--royal-blue-light);
+      margin-bottom: 12px;
+    }
+
+    .type-specimen-heading {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--pure-white);
+    }
+
+    .type-specimen-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: #d1d5db;
+      line-height: 1.7;
+      margin-top: 16px;
+    }
+
+    .anim-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .anim-card {
+      background: var(--deep-gray);
+      border: 1px solid #1f2937;
+      border-radius: 10px;
+      padding: 20px 24px;
+    }
+
+    .anim-card h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .anim-card p {
+      font-size: 12px;
+      color: #9ca3af;
+      line-height: 1.5;
+    }
+
+    .contrib-list {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+
+    .contrib-list li {
+      font-size: 13px;
+      color: #9ca3af;
+      line-height: 1.6;
+      padding: 8px 0 8px 20px;
+      position: relative;
+      border-bottom: 1px solid #111;
+    }
+
+    .contrib-list li:last-child { border-bottom: none; }
+
+    .contrib-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 17px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--royal-blue);
+    }
+
+    .contrib-list li strong { color: var(--pure-white); }
+
+    .anim-card code {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--royal-blue-light);
+      background: rgba(0,87,255,0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* ── SKILLS ──────────────────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .skill-group h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--royal-blue-light);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 100px;
+      background: rgba(0,87,255,0.1);
+      color: #d1d5db;
+      border: 1px solid #1f2937;
+      margin: 4px 4px 0 0;
+    }
+
+    /* ── CONTACT ──────────────────────────────────────── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .contact-item {
+      background: var(--deep-gray);
+      border: 1px solid #1f2937;
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .contact-item .contact-type {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6b7280;
+    }
+
+    .contact-item .contact-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--royal-blue-light);
+    }
+
+    @media print {
+      body { background: #000; }
+      .page, .cover { page-break-after: always; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ CAPA ══════════════════════════════════════════════════════ -->
+  <div class="cover">
+    <div class="cover-tag">Perfil Profissional &amp; Identidade Visual · 2026</div>
+
+    <h1>
+      <span>VICTOR</span><br/>
+      <span class="blue">HUGO</span><br/>
+      <span class="light">CAMPOS</span>
+    </h1>
+
+    <div class="cover-divider"></div>
+
+    <p class="cover-subtitle">
+      Desenvolvedor Fullstack &amp; Cloud · 20 anos · Campos dos Goytacazes, RJ<br/>
+      Certificado AWS · NASA Space Apps Nominado globalmente · Líder de tecnologia no Aspire Leaders Program (Criado por professores da Harvard Business School)
+    </p>
+
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <div class="label">Site</div>
+        <div class="value">vhs4.dev</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="label">E-mail</div>
+        <div class="value">contato@vhs4.dev</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="label">LinkedIn / GitHub</div>
+        <div class="value">/in/vhs4</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="label">Disponibilidade</div>
+        <div class="value" style="color:#4ade80;">● Disponível</div>
+      </div>
+    </div>
+
+    <div class="cover-footer">
+      <span>Documento confidencial · Uso profissional</span>
+      <span class="brand">VHS4</span>
+    </div>
+  </div>
+
+  <!-- ══ QUEM SOU ═══════════════════════════════════════════════════ -->
+  <div class="page">
+    <div class="section-label section-label-dark">01 — Perfil</div>
+    <h2>QUEM<br/><span class="h2-accent">SOU EU</span></h2>
+    <div class="section-divider"></div>
+
+    <div class="bio-grid">
+      <div>
+        <p class="bio-body">
+          Victor Hugo tem <strong>20 anos</strong> e é natural de <strong>Campos dos Goytacazes, Rio de Janeiro</strong>. Atua como <strong>desenvolvedor de software Fullstack &amp; Cloud</strong> em uma multinacional de tecnologia, participando do desenvolvimento do <strong>app Fully</strong> — plataforma de bem-estar voltada para clientes da Prudential e o mercado B2B, com aproximadamente <strong>R$200 milhões em investimentos</strong>, mais de <strong>50 mil usuários ativos</strong> e mais de <strong>100 mil usuários no total</strong>.
+        </p>
+        <div class="highlight-box">
+          <p>Durante sua atuação no Fully, suas contribuições técnicas ajudaram a elevar a avaliação do app de <strong>2.8 → 4.3 no iOS</strong> e de <strong>2.5 → 4.9 no Android</strong>, gerando resultados que representaram <strong>milhões de reais em valor</strong> para a empresa.</p>
+        </div>
+      </div>
+
+      <div>
+        <p class="bio-body">
+          Além do trabalho no Fully, Victor é <strong>líder de tecnologia e inovação</strong> no <strong>Aspire Leaders Program</strong> — programa criado por professores da <strong>Harvard Business School</strong> com a missão de formar jovens líderes globais, reunindo participantes de <strong>mais de 195 países</strong>.
+        </p>
+        <br/>
+        <p class="bio-body">
+          É <strong>graduado em Análise e Desenvolvimento de Sistemas pela FIAP</strong>, possui formação presencial em <strong>Gestão Empresarial</strong> e realizou cursos na <strong>USP</strong> em Marketing Digital e Inteligência Artificial Generativa aplicada ao Marketing. Certificado pela <strong>Amazon Web Services (AWS)</strong> e pela <strong>NASA</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="number">+100K</div>
+        <div class="desc">Usuários no app Fully</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">4.9★</div>
+        <div class="desc">Android após otimizações</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">195+</div>
+        <div class="desc">Países no programa Harvard</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">20</div>
+        <div class="desc">Anos de idade</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TRAJETÓRIA ════════════════════════════════════════════════ -->
+  <div class="page">
+    <div class="section-label section-label-dark">02 — Trajetória</div>
+    <h2>CONQUISTAS<br/><span class="h2-accent">E MARCOS</span></h2>
+    <div class="section-divider"></div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="year">2023 · 18 anos</div>
+        <h3>Campeão Regional — NASA Space Apps Challenge</h3>
+        <p>Liderou o desenvolvimento de um MVP de rede social voltada para cientistas durante o maior hackathon global da NASA, promovido com a Agência Espacial Brasileira. O projeto recebeu um troféu da AEB e foi <strong>nominado globalmente</strong> entre milhares de equipes de todo o mundo.</p>
+        <span class="badge">Troféu AEB · Nominação Global NASA</span>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2024</div>
+        <h3>2º Melhor Projeto do Brasil — Hackathon CAPES</h3>
+        <p>Liderou o desenvolvimento da segunda melhor solução do país para o Portal de Periódicos da CAPES (órgão do Governo Federal). O projeto integrou inteligência artificial com um assistente inteligente e mecanismos de busca aprimorados para facilitar a escrita e pesquisa de artigos acadêmicos.</p>
+        <span class="badge">2º Lugar Nacional · IA aplicada à pesquisa</span>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">Até 20/03/2026 · Multinacional de Tecnologia (Sysmap - Alocado na Fully)</div>
+        <h3>Desenvolvedor Fullstack — App Fully (Prudential / B2B)</h3>
+        <p>App de bem-estar com ~R$200M em investimentos, +50k usuários ativos e +100k totais. Atuou em ambiente de produção de alta escala com foco em escalabilidade, estabilidade e segurança.</p>
+        <ul class="contrib-list">
+          <li>Desenvolvimento full-stack em produção com <strong>NestJS, Node.js, Kotlin, React, Docker e AWS (Lambda, S3)</strong>.</li>
+          <li>Atuou diretamente na implementação de fluxos críticos: <strong>carteira digital do usuário, transações de moedas</strong> e módulos de saúde mental, física e financeira.</li>
+          <li>Implementou a <strong>carteira digital do usuário</strong> — módulo de alto impacto com transações financeiras, saldo e histórico, desenvolvido com NestJS e Node.js em ambiente de produção com mais de <strong>50 mil usuários ativos</strong>.</li>
+          <li>Participou de projeto estratégico que gerou <strong>economia na casa de milhões de reais</strong> ao internalizar funcionalidades críticas antes terceirizadas — sem acesso ao código-fonte original, exigindo <strong>engenharia reversa</strong>, arquitetura própria e desenvolvimento completo das soluções.</li>
+          <li>Contribuiu em <strong>decisões técnicas e arquiteturais</strong>, com melhorias de performance, UX e qualidade de engenharia.</li>
+          <li>Desenvolveu <strong>automações com AWS Lambda</strong> para geração de relatórios operacionais e analíticos, apoiando decisões do negócio.</li>
+          <li>Criou e documentou um <strong>padrão de testes automatizados</strong>, adotado internamente como guia principal da equipe.</li>
+        </ul>
+        <span class="badge">NestJS · Node.js · Kotlin · React · Docker · AWS Lambda · S3</span>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">Em andamento</div>
+        <h3>Líder de Tecnologia e Inovação — Aspire Leaders Program</h3>
+        <p>Atua como Domain Leader of Technology and Innovation no Aspire Leaders Program, criado por professores da Harvard Business School. O programa reúne jovens líderes de mais de 195 países, oferece ensino de inglês, investe em projetos jovens e abre portas para oportunidades internacionais.</p>
+        <span class="badge">Harvard Business School · 195+ países</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PROJETOS ═══════════════════════════════════════════════════ -->
+  <div class="page">
+    <div class="section-label section-label-dark">03 — Projetos</div>
+    <h2>RESULTADOS<br/><span class="h2-accent">COMPROVADOS</span></h2>
+    <div class="section-divider"></div>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-label">Prudential · B2B · Até mar/2026</div>
+        <h3>App Fully</h3>
+        <p>Fullstack em produção de alta escala. Carteira digital, módulos de saúde, automações Lambda, padrão de testes e projeto de engenharia reversa que economizou <strong style="color:var(--royal-blue-light);">milhões de reais</strong>.</p>
+        <div class="project-result">2.5 → 4.9★</div>
+        <div class="project-result-label">Android · 2.8 → 4.3 iOS · +100k usuários</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-label">NASA · AEB · 2023</div>
+        <h3>NASA Space Apps Challenge</h3>
+        <p>Rede social para cientistas desenvolvida em menos de 48h. Campeão regional e projeto nominado globalmente entre milhares de equipes.</p>
+        <div class="project-result">Campeão</div>
+        <div class="project-result-label">Regional + Nominação Global NASA</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-label">Gov. Federal · 2024</div>
+        <h3>CAPES — Portal de Periódicos</h3>
+        <p>IA integrada ao portal acadêmico do governo federal, com assistente inteligente e busca aprimorada para pesquisa e escrita de artigos.</p>
+        <div class="project-result">2º Lugar</div>
+        <div class="project-result-label">Nacional entre todos os projetos</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-label">IA Conversacional · Hotelaria de Luxo · Em produção</div>
+        <h3>Espherinha</h3>
+        <p>Agente de IA para hotelaria de luxo com <strong style="color:var(--royal-blue-light);">+70 mil seguidores</strong>. Qualifica leads, responde dúvidas automaticamente e encaminha o cliente para o time de reservas ou diretamente para o motor de reservas — tudo com LangChain e N8N.</p>
+        <div class="project-result">+70K</div>
+        <div class="project-result-label">Seguidores · Qualificação e conversão de leads em produção</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px;">
+      <div class="section-label section-label-dark" style="margin-bottom: 24px;">Stack Técnica</div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Frontend &amp; Mobile</h4>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Next.js</span>
+          <span class="skill-tag">React Native</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Tailwind CSS</span>
+        </div>
+        <div class="skill-group">
+          <h4>Backend &amp; Cloud</h4>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">NestJS</span>
+          <span class="skill-tag">AWS (Certificado)</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Docker</span>
+        </div>
+        <div class="skill-group">
+          <h4>IA &amp; Dados</h4>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">IA Generativa</span>
+          <span class="skill-tag">NLP</span>
+        </div>
+        <div class="skill-group">
+          <h4>Automação &amp; Liderança</h4>
+          <span class="skill-tag">N8N</span>
+          <span class="skill-tag">AWS Lambda</span>
+          <span class="skill-tag">Tech Leadership</span>
+          <span class="skill-tag">Gestão Empresarial</span>
+          <span class="skill-tag">Agile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ IDENTIDADE VISUAL ═════════════════════════════════════════ -->
+  <div class="page">
+    <div class="section-label section-label-dark">04 — Identidade Visual</div>
+    <h2>PALETA &amp;<br/><span class="h2-accent">TIPOGRAFIA</span></h2>
+    <div class="section-divider"></div>
+
+    <div class="palette-row">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0057FF;"></div>
+        <div class="swatch-info">
+          <div class="color-name">Royal Blue</div>
+          <div class="color-hex">#0057FF</div>
+          <div class="color-role">CTA primário · bordas ativas · glow · links</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#66A3FF;"></div>
+        <div class="swatch-info">
+          <div class="color-name">Royal Blue Light</div>
+          <div class="color-hex">#66A3FF</div>
+          <div class="color-role">Hover states · tags · acento secundário</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#000000; border: 1px solid #1f2937;"></div>
+        <div class="swatch-info">
+          <div class="color-name">Pure Black</div>
+          <div class="color-hex">#000000</div>
+          <div class="color-role">Background principal · fundo de cards</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1A1A1A;"></div>
+        <div class="swatch-info">
+          <div class="color-name">Deep Gray</div>
+          <div class="color-hex">#1A1A1A</div>
+          <div class="color-role">Cards · gradientes · superfícies secundárias</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#ffffff;"></div>
+        <div class="swatch-info" style="background:#1a1a1a;">
+          <div class="color-name" style="color:#fff;">Pure White</div>
+          <div class="color-hex">#FFFFFF</div>
+          <div class="color-role">Texto sobre escuro · seção "Sobre" (inversão)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-card">
+        <div class="font-label">Tipografia de Títulos</div>
+        <div class="font-name">Space Grotesk · Bold 700</div>
+        <div class="type-specimen-heading">ABCDEFGH<br/>1234567890</div>
+        <p style="font-size:12px; color:#6b7280; margin-top:12px; font-family:'DM Sans';">Usado em: H1, H2, stats, nomes de projetos, nav logo. Sempre em caixa alta para impacto.</p>
+      </div>
+      <div class="type-card">
+        <div class="font-label">Tipografia de Corpo</div>
+        <div class="font-name">DM Sans · Regular/Medium 400–600</div>
+        <div class="type-specimen-body">Transformo ideias em experiências digitais que impactam milhares de vidas. Resultados mensuráveis, código que escala.</div>
+        <p style="font-size:12px; color:#6b7280; margin-top:12px;">Usado em: parágrafos, botões, labels, nav links, badges.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ LINGUAGEM VISUAL ══════════════════════════════════════════ -->
+  <div class="page">
+    <div class="section-label section-label-dark">05 — Linguagem Visual</div>
+    <h2>PADRÕES<br/><span class="h2-accent">DE DESIGN</span></h2>
+    <div class="section-divider"></div>
+
+    <div class="bio-grid" style="margin-bottom: 32px;">
+      <div>
+        <p class="bio-body" style="margin-bottom: 16px;"><strong>Estilo geral: Brutalist Tech</strong></p>
+        <p class="bio-body">Tipografia grande e bold, fundo preto absoluto, azul neon como único ponto de cor. Sem meios-termos, sem tons neutros quentes. Alto contraste é a regra.</p>
+        <br/>
+        <p class="bio-body"><strong>Bordas e raios:</strong> <code style="font-size:12px; font-family:monospace; color:var(--royal-blue-light); background:rgba(0,87,255,0.1); padding:2px 6px; border-radius:4px;">rounded-2xl</code> em cards, <code style="font-size:12px; font-family:monospace; color:var(--royal-blue-light); background:rgba(0,87,255,0.1); padding:2px 6px; border-radius:4px;">rounded-full</code> em avatares e badges. Raio base: <code style="font-size:12px; font-family:monospace; color:var(--royal-blue-light); background:rgba(0,87,255,0.1); padding:2px 6px; border-radius:4px;">0.625rem</code>.</p>
+        <br/>
+        <p class="bio-body"><strong>Cards:</strong> <code style="font-size:11px; font-family:monospace; color:var(--royal-blue-light); background:rgba(0,87,255,0.1); padding:2px 6px; border-radius:4px;">gradient deep-gray → black</code> + borda <code style="font-size:11px; font-family:monospace; color:var(--royal-blue-light); background:rgba(0,87,255,0.1); padding:2px 6px; border-radius:4px;">royal-blue/20</code> que intensifica para <code style="font-size:11px; font-family:monospace; color:var(--royal-blue-light); background:rgba(0,87,255,0.1); padding:2px 6px; border-radius:4px;">/50</code> no hover.</p>
+        <br/>
+        <p class="bio-body"><strong>Seção "Sobre":</strong> inverte para fundo branco com texto preto — quebra de ritmo intencional que funciona como respiro visual entre as seções escuras.</p>
+      </div>
+      <div>
+        <p class="bio-body" style="margin-bottom:16px;"><strong>Regras de cor</strong></p>
+        <div class="highlight-box">
+          <p>O azul <strong>#0057FF nunca gradua</strong> — ele aparece e some. Sem gradientes de cor. Apenas gradientes de preto/cinza. O azul é o único acento cromático; essa disciplina é o que mantém a identidade coesa.</p>
+        </div>
+        <br/>
+        <p class="bio-body"><strong>Tom de voz visual:</strong> maiúsculas nos títulos de seção transmitem poder sem parecer grito quando combinadas com o ritmo do espaçamento. Subtítulos em DM Sans regular equilibram.</p>
+        <br/>
+        <p class="bio-body"><strong>Hover universal:</strong> <code style="font-size:11px; font-family:monospace; color:var(--royal-blue-light); background:rgba(0,87,255,0.1); padding:2px 6px; border-radius:4px;">scale(1.05)</code> em botões e cards. Nav usa underline deslizante da esquerda em azul.</p>
+      </div>
+    </div>
+
+    <div class="section-label section-label-dark" style="margin-bottom: 20px;">Animações</div>
+    <div class="anim-row">
+      <div class="anim-card">
+        <h4>kinetic-text</h4>
+        <p>Leve oscilação horizontal no H1 do hero. Loop de <code>4s</code>, deslocamento de <code>±2px</code> no eixo X.</p>
+      </div>
+      <div class="anim-card">
+        <h4>glitch</h4>
+        <p>Deslocamento rápido no avatar (foto de perfil). Loop de <code>0.3s</code>, offset de <code>±2px</code> em X e Y.</p>
+      </div>
+      <div class="anim-card">
+        <h4>float</h4>
+        <p>Levitação vertical suave em elementos decorativos. Loop de <code>6s</code>, amplitude de <code>20px</code>.</p>
+      </div>
+      <div class="anim-card">
+        <h4>pulse-glow</h4>
+        <p>Box-shadow azul pulsante. Loop de <code>3s</code>, varia de <code>20px → 40px</code> de blur em <code>rgba(0,87,255)</code>.</p>
+      </div>
+      <div class="anim-card">
+        <h4>Entrance (hero)</h4>
+        <p>Elementos entram com <code>opacity-0 + translate-y-10</code> → visível. Delays escalonados: <code>300ms · 700ms · 1s · 1.2s</code>.</p>
+      </div>
+      <div class="anim-card">
+        <h4>hover-underline (nav)</h4>
+        <p>Pseudo-elemento <code>::after</code> com <code>width: 0 → 100%</code> em <code>0.3s ease</code>. Cor: <code>--royal-blue</code>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CONTATO ════════════════════════════════════════════════════ -->
+  <div class="page" style="page-break-after: unset;">
+    <div class="section-label section-label-dark">06 — Contato</div>
+    <h2>VAMOS<br/><span class="h2-accent">CONVERSAR</span></h2>
+    <div class="section-divider"></div>
+
+    <p class="bio-body" style="max-width: 560px; margin-bottom: 0;">
+      Disponível para posições fullstack, cloud, liderança técnica e projetos de alto impacto. Se o seu desafio é à altura, entre em contato.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <span class="contact-type">Site</span>
+        <span class="contact-value">vhs4.dev</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-type">E-mail</span>
+        <span class="contact-value">contato@vhs4.dev</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-type">LinkedIn</span>
+        <span class="contact-value">linkedin.com/in/vhs4</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-type">GitHub</span>
+        <span class="contact-value">github.com/vhs4</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-type">WhatsApp</span>
+        <span class="contact-value">+55 (22) 99901-8809</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-type">Localização</span>
+        <span class="contact-value">Campos dos Goytacazes, RJ · Brasil</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 80px; padding-top: 32px; border-top: 1px solid #1f2937; display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-size: 12px; color: #4b5563;">Victor Hugo Campos · vhs4.dev · 2026</span>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: var(--royal-blue);">VHS4</span>
+    </div>
+  </div>
+
+</body>
+</html>

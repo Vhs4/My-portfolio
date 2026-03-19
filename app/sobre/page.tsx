@@ -39,10 +39,10 @@ const stackTecnologico = [
     icon: Monitor,
     cor: "from-blue-500 to-cyan-500",
     tecnologias: [
-      { nome: "React", nivel: 95, anos: 2 },
-      { nome: "Next.js", nivel: 90, anos: 2 },
-      { nome: "TypeScript", nivel: 88, anos: 2 },
-      { nome: "Tailwind CSS", nivel: 92, anos: 2 },
+      { nome: "React", nivel: 95, anos: 3 },
+      { nome: "Next.js", nivel: 90, anos: 3 },
+      { nome: "TypeScript", nivel: 88, anos: 3 },
+      { nome: "Tailwind CSS", nivel: 92, anos: 3 },
     ],
   },
   {
@@ -51,8 +51,8 @@ const stackTecnologico = [
     cor: "from-green-500 to-emerald-500",
     tecnologias: [
       { nome: "Node.js", nivel: 90, anos: 3 },
-      { nome: "Python", nivel: 85, anos: 2 },
-      { nome: "Inteligência Artificial", nivel: 80, anos: 1 },
+      { nome: "Python", nivel: 85, anos: 3 },
+      { nome: "Inteligência Artificial", nivel: 80, anos: 2 },
       { nome: "PostgreSQL", nivel: 85, anos: 2 },
       { nome: "Firebase", nivel: 55, anos: 1 },
     ],
@@ -72,13 +72,15 @@ const experiencias = [
   {
     cargo: "Desenvolvedor Full Stack",
     empresa: "Fully (Prudential - 200M investidos)",
-    periodo: "abril de 2025 - Presente",
+    periodo: "abril de 2025 - março de 2026",
     descricao:
       "Desenvolvimento e otimização de aplicativo de bem-estar, saúde e fitness com impacto direto nas avaliações e experiência do usuário.",
     conquistas: [
       "Elevou avaliação iOS de 2.8 para 4.3 estrelas",
       "Aumentou avaliação Android de 2.5 para 4.9 estrelas",
-      "Impactou milhares de pessoas globalmente",
+      "Implementou a carteira digital do usuário — módulo de alto impacto com transações financeiras, saldo e histórico em produção com +50k usuários ativos",
+      "Participou de projeto estratégico que gerou economia na casa de milhões de reais ao internalizar funcionalidades críticas antes terceirizadas, exigindo engenharia reversa e arquitetura própria",
+      "Criou e documentou padrão de testes automatizados adotado internamente como guia principal da equipe",
     ],
     tecnologias: [
       { nome: "Nest", cor: "bg-blue-500", icon: "💻" },
