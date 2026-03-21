@@ -71,7 +71,32 @@ const stackTecnologico = [
 
 const experiencias = [
   {
-    cargo: "Desenvolvedor Full Stack",
+    cargo: "Engenheiro de Software",
+    empresa: "Freelance",
+    periodo: "março de 2026 - Presente",
+    descricao:
+      "Arquitetura e entrega solo de projetos fullstack em produção, com responsabilidade técnica total — do modelagem de dados ao deploy — em colaboração com designer UX/UI.",
+    conquistas: [
+      "Projetou e entregou sozinho um LMS com IA (frontend, backend, infra e deploy) para uma professora doutora de universidade de renome no Brasil",
+      "Integrou GPT-4o da OpenAI para geração de questões de múltipla escolha a partir de PDFs, retornando JSON estruturado e editável",
+      "Construiu pipeline de detecção de lacunas de aprendizagem com diagnósticos personalizados via OpenAI",
+      "Implementou motor de gamificação com XP, badges e conquistas, além de autenticação JWT multi-perfil com Argon2id + pepper server-side",
+      "Construiu e fez deploy da Espherinha — agente de IA conversacional via WhatsApp para hotelaria de luxo com +70k seguidores no Instagram, automatizando qualificação de leads",
+      "Arquitetou e fez deploy de Concierge Interno de IA baseado em RAG, treinado nas políticas e FAQs da propriedade, reduzindo carga operacional manual",
+    ],
+    tecnologias: [
+      { nome: "React / Next.js", cor: "bg-cyan-500", icon: "⚛️" },
+      { nome: "NestJS", cor: "bg-blue-600", icon: "💻" },
+      { nome: "PostgreSQL", cor: "bg-blue-700", icon: "🗄️" },
+      { nome: "GPT-4o / OpenAI", cor: "bg-emerald-600", icon: "🧠" },
+      { nome: "Docker / Traefik", cor: "bg-sky-600", icon: "🐳" },
+      { nome: "Cloudflare", cor: "bg-orange-500", icon: "☁️" },
+      { nome: "N8N + WhatsApp API", cor: "bg-green-600", icon: "🤖" },
+      { nome: "RAG / LangChain", cor: "bg-violet-600", icon: "🔗" },
+    ],
+  },
+  {
+    cargo: "Desenvolvedor Full Stack - Trainee",
     empresa: "Fully (Prudential - 200M investidos)",
     periodo: "abril de 2025 - março de 2026",
     descricao:
