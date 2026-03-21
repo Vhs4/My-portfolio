@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Progress } from "@/components/ui/progress"
 import {
   ArrowLeft,
@@ -325,13 +326,25 @@ export default function SobrePage() {
                 </div>
               </div>
 
-              <Button size="lg" className="bg-royal-blue hover:bg-royal-blue-light text-pure-white font-body font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 cursor-pointer"
-                onClick={() => {
-                  window.open("/resume_victor_hugo_campos.pdf", "_blank");
-                }}>
-                <Download className="mr-2 h-5 w-5" />
-                Baixar CV
-              </Button>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button size="lg" className="bg-royal-blue hover:bg-royal-blue-light text-pure-white font-body font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 cursor-pointer">
+                    <Download className="mr-2 h-5 w-5" />
+                    Baixar CV
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-4">
+                  <p className="text-sm font-semibold mb-3 text-center">Escolha o idioma:</p>
+                  <div className="flex gap-2">
+                    <a href="/curriculo_victor_hugo_campos_oficial.pdf" target="_blank" rel="noopener noreferrer">
+                      <Button size="sm" variant="outline" className="cursor-pointer">🇧🇷 Português</Button>
+                    </a>
+                    <a href="/resume_victor_hugo_campos_oficial.pdf" target="_blank" rel="noopener noreferrer">
+                      <Button size="sm" variant="outline" className="cursor-pointer">🇺🇸 English</Button>
+                    </a>
+                  </div>
+                </PopoverContent>
+              </Popover>
             </div>
 
             <div className="relative">

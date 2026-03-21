@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { ArrowDown, Github, Linkedin, Mail, ExternalLink, Code, Rocket, Users, Menu, X } from "lucide-react"
 import Link from "next/link"
 import ContactForm from "@/components/contact-form"
@@ -171,16 +172,28 @@ export default function HomePage() {
                 <ExternalLink className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-royal-blue text-royal-blue hover:bg-royal-blue hover:text-pure-white font-body font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 bg-transparent cursor-pointer"
-              onClick={() => {
-                window.open("/resume_victor_hugo_campos.pdf", "_blank");
-              }}
-            >
-              Baixar CV
-            </Button>
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-royal-blue text-royal-blue hover:bg-royal-blue hover:text-pure-white font-body font-semibold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 bg-transparent cursor-pointer"
+                >
+                  Baixar CV
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-4">
+                <p className="text-sm font-semibold mb-3 text-center">Escolha o idioma:</p>
+                <div className="flex gap-2">
+                  <a href="/curriculo_victor_hugo_campos_oficial.pdf" target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" variant="outline" className="cursor-pointer">🇧🇷 Português</Button>
+                  </a>
+                  <a href="/resume_victor_hugo_campos_oficial.pdf" target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" variant="outline" className="cursor-pointer">🇺🇸 English</Button>
+                  </a>
+                </div>
+              </PopoverContent>
+            </Popover>
           </div>
 
           {/* Social Links */}
