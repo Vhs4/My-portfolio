@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "projects": "Projetos",
+    "about": "Sobre",
+    "blog": "Blog",
+    "contact": "Contato"
+  },
+  "home": {
+    "hero": {
+      "line1": "EU NÃO APENAS",
+      "line2": "DESENVOLVO",
+      "line3": "EU CONSTRUO",
+      "line4": "O FUTURO",
+      "description": "Aos 20 anos, já <blue>liderei o time campeão regional do NASA Space Apps Challenge</blue> e além disso já impactei +50 mil pessoas. Transformo ideias em experiências digitais que impactam milhares de vidas.",
+      "cta_projects": "Ver Projetos",
+      "cta_cv": "Baixar Currículo",
+      "cv_choose_lang": "Escolha o idioma:"
+    },
+    "stats": {
+      "users": "+100k",
+      "users_label": "Usuários impactados",
+      "rating": "4.9★",
+      "rating_label": "Avaliação no Android",
+      "countries": "195+",
+      "countries_label": "Países no programa Harvard",
+      "age": "20",
+      "age_label": "Anos de experiência"
+    },
+    "projects_section": {
+      "title": "PROJETOS EM",
+      "title_accent": "DESTAQUE",
+      "subtitle": "Cada projeto é uma solução real para problemas reais. Aqui estão alguns dos trabalhos que mais me orgulho.",
+      "cta": "Ver Todos os Projetos",
+      "status_live": "No ar",
+      "status_done": "Concluído",
+      "team": "Equipe",
+      "year": "Ano"
+    },
+    "about_section": {
+      "label": "SOBRE MIM",
+      "title": "CONSTRUINDO O",
+      "title_accent": "FUTURO",
+      "p1": "Desenvolvedor Full Stack. Com experiência em projetos de alta escala — como o app Fully da Prudential com R$200M em investimentos e +100k usuários — e reconhecimento em competições globais como o NASA Space Apps Challenge.",
+      "p2": "Certificado AWS, líder no Aspire Leaders Program (criado por professores da Harvard Business School) e com projetos que já impactaram mais de 100 mil pessoas.",
+      "cta_about": "Conheça Minha História",
+      "cta_blog": "Ler o Blog",
+      "certified": "Certificado AWS",
+      "global": "Reconhecimento Global",
+      "impact": "+100k Pessoas Impactadas"
+    },
+    "blog_section": {
+      "label": "BLOG & CONTEÚDO",
+      "title": "CONHECIMENTO EM",
+      "title_accent": "MOVIMENTO",
+      "subtitle": "Artigos sobre desenvolvimento, tecnologia e carreira. Conteúdo prático para devs que querem evoluir.",
+      "read_more": "Ler artigo",
+      "cta": "Ver Todos os Artigos"
+    },
+    "contact_section": {
+      "label": "CONTATO",
+      "title": "VAMOS",
+      "title_accent": "CONVERSAR?",
+      "subtitle": "Tem um projeto, uma ideia, ou quer bater um papo sobre tecnologia? Estou aqui.",
+      "availability": "Disponível para projetos freelance e posições fullstack remotas.",
+      "email_label": "E-mail",
+      "location_label": "Localização",
+      "location_value": "Campos dos Goytacazes, RJ",
+      "social_label": "Redes Sociais",
+      "form_title": "Envie uma Mensagem",
+      "whatsapp": "Chamar no WhatsApp"
+    }
+  },
+  "about": {
+    "hero": {
+      "greeting": "OLÁ, EU SOU",
+      "name": "VICTOR HUGO",
+      "subtitle": "Desenvolvedor Full Stack, liderei o time campeão regional do NASA Space Apps Challenge e hoje na Fully impacto a vida de +50 mil pessoas",
+      "description": "Aos 20 anos, já conquistei reconhecimento global como campeão regional do NASA Space Apps Challenge, liderei o 2º melhor projeto do Brasil no hackathon CAPES e atuo como Domain Leader of Technology no programa de liderança global fundado por professores de Harvard. Cada projeto é uma oportunidade de criar soluções que impactam milhares de pessoas.",
+      "location": "Campos dos Goytacazes, RJ",
+      "role_label": "20 anos, Domain Leader Aspire Leaders Program",
+      "aws": "2x Certificado AWS",
+      "download_cv": "Baixar Currículo",
+      "cv_choose_lang": "Escolha o idioma:"
+    },
+    "stack_section": {
+      "title": "STACK TECNOLÓGICO",
+      "subtitle": "Ferramentas e tecnologias que domino para criar soluções completas e escaláveis",
+      "years_singular": "ano",
+      "years_plural": "anos"
+    },
+    "experience_section": {
+      "title": "EXPERIÊNCIA",
+      "subtitle": "Jornada profissional construindo soluções que impactam milhares de pessoas",
+      "tech_used": "Tecnologias Utilizadas:",
+      "achievements": "Principais Conquistas:"
+    },
+    "values_section": {
+      "title": "MINHA FILOSOFIA",
+      "subtitle": "Os valores que guiam cada linha de código que escrevo"
+    },
+    "beyond_section": {
+      "title": "ALÉM DO CÓDIGO",
+      "innovation": "Inovação Espacial",
+      "innovation_desc": "Apaixonado por tecnologia espacial",
+      "education": "Educação Contínua",
+      "education_desc": "USP, Alura, certificações AWS",
+      "impact": "Impacto Global",
+      "impact_desc": "Liderança em +150 países",
+      "quote": "\"Aos 20 anos, já aprendi que a tecnologia não é apenas sobre código - é sobre criar soluções que transformam vidas. Cada linha que escrevo tem o potencial de impactar diversas pessoas ao redor do mundo.\""
+    },
+    "cta_section": {
+      "title": "VAMOS TRABALHAR JUNTOS?",
+      "subtitle": "Se você chegou até aqui, provavelmente temos muito em comum. Vamos conversar sobre seu próximo projeto!",
+      "start": "Iniciar Conversa",
+      "projects": "Ver Meus Projetos"
+    }
+  },
+  "projects": {
+    "title": "MEUS",
+    "title_accent": "PROJETOS",
+    "subtitle": "Cada projeto é uma solução real para problemas reais. Do design ao deploy.",
+    "all": "Todos",
+    "view_project": "Ver Projeto",
+    "live": "No ar",
+    "done": "Concluído",
+    "team": "Equipe",
+    "year": "Ano",
+    "external_link": "Ver ao vivo",
+    "code_link": "Ver código",
+    "back": "Projetos"
+  },
+  "blog": {
+    "title": "MEU",
+    "title_accent": "BLOG",
+    "subtitle": "Compartilhando conhecimento sobre desenvolvimento, tecnologia e carreira. Artigos práticos para desenvolvedores que querem evoluir constantemente.",
+    "search_placeholder": "Buscar artigos... (ex: next, react, typescript)",
+    "filters": "Filtros",
+    "filter_by": "Filtrar por:",
+    "clear_filters": "Limpar filtros",
+    "categories": "Categorias:",
+    "active_filters": "Filtros ativos:",
+    "search_label": "Busca:",
+    "category_label": "Categoria:",
+    "featured_title": "Artigos em Destaque",
+    "all_articles": "Todos os Artigos",
+    "search_results": "Resultados da Busca",
+    "articles_found_singular": "artigo encontrado",
+    "articles_found_plural": "artigos encontrados",
+    "no_articles": "Nenhum artigo encontrado",
+    "no_articles_search": "Não encontramos artigos para",
+    "no_articles_category": "Não há artigos na categoria",
+    "read_more": "Ler mais",
+    "read_full": "Ler artigo completo",
+    "home": "Home",
+    "all_categories": "Todos"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+}

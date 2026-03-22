@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "line1": "I DON'T JUST",
+      "line2": "DEVELOP",
+      "line3": "I BUILD",
+      "line4": "THE FUTURE",
+      "description": "At 20, I <blue>led the regional champion team at the NASA Space Apps Challenge</blue> and have already impacted 50k+ people. I turn ideas into digital experiences that change thousands of lives.",
+      "cta_projects": "View Projects",
+      "cta_cv": "Download Resume",
+      "cv_choose_lang": "Choose language:"
+    },
+    "stats": {
+      "users": "+100k",
+      "users_label": "Users impacted",
+      "rating": "4.9★",
+      "rating_label": "Android rating",
+      "countries": "195+",
+      "countries_label": "Countries in Harvard program",
+      "age": "20",
+      "age_label": "Years of experience"
+    },
+    "projects_section": {
+      "title": "FEATURED",
+      "title_accent": "PROJECTS",
+      "subtitle": "Each project is a real solution for real problems. Here are some of my proudest works.",
+      "cta": "View All Projects",
+      "status_live": "Live",
+      "status_done": "Completed",
+      "team": "Team",
+      "year": "Year"
+    },
+    "about_section": {
+      "label": "ABOUT ME",
+      "title": "BUILDING",
+      "title_accent": "THE FUTURE",
+      "p1": "20-year-old Full Stack Developer from Brazil. With experience in large-scale projects — like the Fully app from Prudential with R$200M in investment and 100k+ users — and recognition in global competitions like NASA Space Apps Challenge.",
+      "p2": "AWS Certified, leader at the Aspire Leaders Program (created by Harvard Business School professors) and with projects that have already impacted over 100 thousand people.",
+      "cta_about": "My Full Story",
+      "cta_blog": "Read the Blog",
+      "certified": "AWS Certified",
+      "global": "Global Recognition",
+      "impact": "100k+ People Impacted"
+    },
+    "blog_section": {
+      "label": "BLOG & CONTENT",
+      "title": "KNOWLEDGE IN",
+      "title_accent": "MOTION",
+      "subtitle": "Articles on development, technology and career. Practical content for devs who want to grow.",
+      "read_more": "Read article",
+      "cta": "View All Articles"
+    },
+    "contact_section": {
+      "label": "CONTACT",
+      "title": "LET'S",
+      "title_accent": "TALK?",
+      "subtitle": "Have a project, an idea, or want to chat about tech? I'm here.",
+      "availability": "Available for freelance projects and remote fullstack positions.",
+      "email_label": "E-mail",
+      "location_label": "Location",
+      "location_value": "Brazil",
+      "social_label": "Social Media",
+      "form_title": "Send a Message",
+      "whatsapp": "Message on WhatsApp"
+    }
+  },
+  "about": {
+    "hero": {
+      "greeting": "HI, I'M",
+      "name": "VICTOR HUGO",
+      "subtitle": "Full Stack Developer, led the regional champion team at NASA Space Apps Challenge and currently at Fully impacting 50k+ people's lives",
+      "description": "At 20, I've earned global recognition as regional champion at NASA Space Apps Challenge, led the 2nd best project in Brazil at the CAPES hackathon, and serve as Domain Leader of Technology in the global leadership program founded by Harvard Business School professors. Every project is an opportunity to build solutions that impact thousands of people.",
+      "location": "Brazil",
+      "role_label": "Domain Leader Aspire Leaders Program",
+      "aws": "2x AWS Certified",
+      "download_cv": "Download Resume",
+      "cv_choose_lang": "Choose language:"
+    },
+    "stack_section": {
+      "title": "TECH STACK",
+      "subtitle": "Tools and technologies I master to build complete and scalable solutions",
+      "years_singular": "year",
+      "years_plural": "years"
+    },
+    "experience_section": {
+      "title": "EXPERIENCE",
+      "subtitle": "Professional journey building solutions that impact thousands of people",
+      "tech_used": "Technologies Used:",
+      "achievements": "Key Achievements:"
+    },
+    "values_section": {
+      "title": "MY PHILOSOPHY",
+      "subtitle": "The values that guide every line of code I write"
+    },
+    "beyond_section": {
+      "title": "BEYOND THE CODE",
+      "innovation": "Space Innovation",
+      "innovation_desc": "Passionate about space technology",
+      "education": "Continuous Learning",
+      "education_desc": "USP, Alura, AWS certifications",
+      "impact": "Global Impact",
+      "impact_desc": "Leadership in 150+ countries",
+      "quote": "\"At 20, I've already learned that technology isn't just about code — it's about building solutions that transform lives. Every line I write has the potential to impact people around the world.\""
+    },
+    "cta_section": {
+      "title": "LET'S WORK TOGETHER?",
+      "subtitle": "If you made it this far, we probably have a lot in common. Let's talk about your next project!",
+      "start": "Start a Conversation",
+      "projects": "View My Projects"
+    }
+  },
+  "projects": {
+    "title": "MY",
+    "title_accent": "PROJECTS",
+    "subtitle": "Each project is a real solution for real problems. From design to deployment.",
+    "all": "All",
+    "view_project": "View Project",
+    "live": "Live",
+    "done": "Completed",
+    "team": "Team",
+    "year": "Year",
+    "external_link": "View live",
+    "code_link": "View code",
+    "back": "Projects"
+  },
+  "blog": {
+    "title": "MY",
+    "title_accent": "BLOG",
+    "subtitle": "Sharing knowledge about development, technology and career. Practical articles for developers who want to grow constantly.",
+    "search_placeholder": "Search articles... (e.g. next, react, typescript)",
+    "filters": "Filters",
+    "filter_by": "Filter by:",
+    "clear_filters": "Clear filters",
+    "categories": "Categories:",
+    "active_filters": "Active filters:",
+    "search_label": "Search:",
+    "category_label": "Category:",
+    "featured_title": "Featured Articles",
+    "all_articles": "All Articles",
+    "search_results": "Search Results",
+    "articles_found_singular": "article found",
+    "articles_found_plural": "articles found",
+    "no_articles": "No articles found",
+    "no_articles_search": "We couldn't find articles for",
+    "no_articles_category": "There are no articles in the category",
+    "read_more": "Read more",
+    "read_full": "Read full article",
+    "home": "Home",
+    "all_categories": "All"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

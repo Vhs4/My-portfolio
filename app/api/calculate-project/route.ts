@@ -2,6 +2,8 @@ import { openai } from "@ai-sdk/openai"
 import { generateObject } from "ai"
 import { z } from "zod"
 
+const BRL_TO_USD = 5.7 // approximate exchange rate
+
 const VICTOR_CONFIG = {
     hourlyRate: 40, // R$ por hora
 
@@ -276,7 +278,8 @@ export async function POST(request: Request) {
             }, { status: 400 })
         }
 
-        const { projectDescription, projectType, budget, timeline } = body
+        const { projectDescription, projectType, budget, timeline, locale } = body
+        const isEn = locale === "en"
 
         // Validação com valores padrão
         const cleanDescription = sanitizeInput(projectDescription) || "Projeto de desenvolvimento web"
@@ -298,8 +301,27 @@ export async function POST(request: Request) {
             }, { status: 503 })
         }
 
-        // Prompt melhorado e mais específico
-        const systemPrompt = `Você é Victor Hugo, desenvolvedor full-stack experiente. Analise projetos e forneça estimativas precisas.
+        const systemPrompt = isEn
+            ? `You are Victor Hugo, an experienced full-stack developer. Analyze projects and provide precise estimates. IMPORTANT: Always return valid data, even for vague projects. Respond entirely in English.
+
+Settings:
+- Rate: R$ ${VICTOR_CONFIG.hourlyRate}/hour (Brazilian Real)
+- Complexities: ${JSON.stringify(VICTOR_CONFIG.complexityAdjustments)}
+- Base hours: ${JSON.stringify(Object.fromEntries(Object.entries(VICTOR_CONFIG.projectTypes).map(([type, config]) => [type, config.base])))}
+
+Available technologies (for simple projects consider WordPress, e.g. landing page, institutional site, etc. Also, if WordPress, Vercel won't be used):
+${Object.entries(VICTOR_CONFIG.technologies).map(([cat, techs]) => `${cat}: ${techs.join(", ")}`).join("\n")}
+
+ESTIMATION RULES:
+1. Use the feature-based system to estimate hours
+2. Simple Landing Page: 24-40h base + features
+3. E-commerce: 120h base + specific features
+4. Mobile App: 160h base + native features
+5. Web System: 200h base + business complexity
+6. ALWAYS add hours for each mentioned feature
+7. Adjust by complexity: Low (0.85x), Medium (1.0x), High (1.4x), Very High (2.0x)
+8. Write ALL text fields (description, recommendations, features, challenges, nextSteps) in English.`
+            : `Você é Victor Hugo, desenvolvedor full-stack experiente. Analise projetos e forneça estimativas precisas.
 
 IMPORTANTE: Sempre retorne dados válidos, mesmo para projetos vagos.
 
@@ -309,28 +331,20 @@ Configurações:
 - Horas base: ${JSON.stringify(Object.fromEntries(Object.entries(VICTOR_CONFIG.projectTypes).map(([type, config]) => [type, config.base])))}
 
 Tecnologias disponíveis (Se for algo simples considere wordpress, ex: landing page, site institucional e etc... E além disso se for wordpress não usarei vercel):
-${Object.entries(VICTOR_CONFIG.technologies)
-                .map(([cat, techs]) => `${cat}: ${techs.join(", ")}`)
-                .join("\n")}
+${Object.entries(VICTOR_CONFIG.technologies).map(([cat, techs]) => `${cat}: ${techs.join(", ")}`).join("\n")}
 
 REGRAS DE ESTIMATIVA:
 1. Use o sistema baseado em funcionalidades para estimar horas
 2. Landing Page simples: 24-40h base + funcionalidades
-3. E-commerce: 120h base + funcionalidades específicas  
+3. E-commerce: 120h base + funcionalidades específicas
 4. App Mobile: 160h base + features nativas
 5. Sistema Web: 200h base + complexidade do negócio
 6. SEMPRE some as horas de cada funcionalidade mencionada
 7. Ajuste pela complexidade: Baixa (0.85x), Média (1.0x), Alta (1.4x), Muito Alta (2.0x)`
 
-        const userPrompt = `Analise este projeto:
-
-Descrição: ${cleanDescription}
-Tipo: ${cleanProjectType}
-Orçamento: ${cleanBudget}
-Prazo: ${cleanTimeline}
-
-Forneça análise completa com estimativas realistas (se for landing page ou site simples seja mais flexível e sem preço muito careiro, baseado em quem cobra 40 reais a hora).
-`
+        const userPrompt = isEn
+            ? `Analyze this project:\n\nDescription: ${cleanDescription}\nType: ${cleanProjectType}\nBudget: ${cleanBudget}\nTimeline: ${cleanTimeline}\n\nProvide a complete analysis with realistic estimates. All text must be in English.`
+            : `Analise este projeto:\n\nDescrição: ${cleanDescription}\nTipo: ${cleanProjectType}\nOrçamento: ${cleanBudget}\nPrazo: ${cleanTimeline}\n\nForneça análise completa com estimativas realistas (se for landing page ou site simples seja mais flexível e sem preço muito careiro, baseado em quem cobra 40 reais a hora).`
 
         // Tentativa de geração com retry
         let result: any = null
@@ -406,11 +420,26 @@ Forneça análise completa com estimativas realistas (se for landing page ou sit
         const baseConfig = VICTOR_CONFIG.projectTypes[cleanProjectType as keyof typeof VICTOR_CONFIG.projectTypes]
         const baseHours = baseConfig?.base || 60
 
+        const complexityMapEn: Record<string, string> = {
+            "Muito Baixa": "Very Low",
+            "Baixa": "Low",
+            "Média": "Medium",
+            "Alta": "High",
+            "Muito Alta": "Very High",
+        }
+
+        const minCostUsd = Math.round(minCost / BRL_TO_USD / 10) * 10
+        const maxCostUsd = Math.round(maxCost / BRL_TO_USD / 10) * 10
+
         const response = {
             success: true,
-            timeEstimate: `${Math.ceil(validatedResult.timeEstimateWeeks)} semana${validatedResult.timeEstimateWeeks > 1 ? "s" : ""}`,
-            costRange: `R$ ${minCost.toLocaleString("pt-BR")} - R$ ${maxCost.toLocaleString("pt-BR")}`,
-            complexity: validatedResult.complexityLevel,
+            timeEstimate: isEn
+                ? `${Math.ceil(validatedResult.timeEstimateWeeks)} week${validatedResult.timeEstimateWeeks > 1 ? "s" : ""}`
+                : `${Math.ceil(validatedResult.timeEstimateWeeks)} semana${validatedResult.timeEstimateWeeks > 1 ? "s" : ""}`,
+            costRange: isEn
+                ? `$${minCostUsd.toLocaleString("en-US")} - $${maxCostUsd.toLocaleString("en-US")}`
+                : `R$ ${minCost.toLocaleString("pt-BR")} - R$ ${maxCost.toLocaleString("pt-BR")}`,
+            complexity: isEn ? (complexityMapEn[validatedResult.complexityLevel] ?? validatedResult.complexityLevel) : validatedResult.complexityLevel,
             estimatedHours: validatedResult.estimatedHours,
             technologies: validatedResult.technologies,
             features: validatedResult.features,

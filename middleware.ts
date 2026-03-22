@@ -1,16 +1,18 @@
+import createIntlMiddleware from "next-intl/middleware"
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { routing } from "./i18n/routing"
+
+const intlMiddleware = createIntlMiddleware(routing)
 
 export function middleware(request: NextRequest) {
-    // Clone the request headers
-    const requestHeaders = new Headers(request.headers)
+    // Skip intl middleware for API routes — next-intl would rewrite them to locale-prefixed
+    // paths that don't exist, causing 404s
+    const isApiRoute = request.nextUrl.pathname.startsWith('/api/')
 
-    // Create the response
-    const response = NextResponse.next({
-        request: {
-            headers: requestHeaders,
-        },
-    })
+    const response = isApiRoute
+        ? NextResponse.next()
+        : intlMiddleware(request)
 
     // Security headers (additional layer to next.config.js)
     const securityHeaders = {
@@ -104,7 +106,7 @@ export function middleware(request: NextRequest) {
         const allowedOrigins = [
             'https://vhs4.dev',
             'https://www.vhs4.dev',
-            ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000'] : [])
+            ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002'] : [])
         ]
 
         if (origin && allowedOrigins.includes(origin)) {
@@ -151,13 +153,6 @@ export function middleware(request: NextRequest) {
 // Configure which paths the middleware should run on
 export const config = {
     matcher: [
-        /*
-         * Match all request paths except:
-         * - _next/static (static files)
-         * - _next/image (image optimization files)
-         * - favicon.ico (favicon file)
-         * - public folder files
-         */
-        '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+        '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|pdf|ico|txt|xml)$).*)',
     ],
 }
