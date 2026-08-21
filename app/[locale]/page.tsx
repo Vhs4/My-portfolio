@@ -88,7 +88,7 @@ export default function HomePage() {
           </div>
 
           <div className={`transition-all duration-1500 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-            <h1 className="font-heading font-bold text-6xl md:text-8xl lg:text-9xl mb-6 animate-kinetic-text">
+            <h1 className="font-heading font-bold text-4xl sm:text-6xl md:text-8xl lg:text-9xl mb-6 animate-kinetic-text">
               <span className="block">{t("hero.line1")}</span>
               <span className="block text-royal-blue">{t("hero.line2")}</span>
               <span className="block">{t("hero.line3")}</span>
@@ -163,7 +163,7 @@ export default function HomePage() {
       <section id="projetos" className="min-h-screen bg-pure-black text-pure-white py-20 pt-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-heading font-bold text-5xl md:text-7xl mb-8">
+            <h2 className="font-heading font-bold text-4xl sm:text-5xl md:text-7xl mb-8">
               {locale === "pt" ? "PROJETOS QUE" : "PROJECTS THAT"}
               <span className="block text-royal-blue">{locale === "pt" ? "FAZEM A DIFERENÇA" : "MAKE A DIFFERENCE"}</span>
             </h2>
@@ -194,8 +194,8 @@ export default function HomePage() {
                   <h3 className="font-heading font-bold text-3xl mb-4 text-white group-hover:text-royal-blue-light transition-colors">Iara</h3>
                   <p className="font-body text-gray-300 mb-6 leading-relaxed">
                     {locale === "pt"
-                      ? "Tutora de IA que ensina educação financeira pelo WhatsApp para mais de 6.000 alunos de escolas públicas e particulares. Sistema multiagente em produção no Google Cloud: personalização em tempo real, gamificação, avaliação automática e mais de 1,5 milhão de mensagens processadas."
-                      : "AI tutor teaching financial literacy over WhatsApp to 6,000+ public and private school students. Multi-agent system in production on Google Cloud: real-time personalization, gamification, automated assessment and 1.5M+ messages processed."}
+                      ? "Tutora de IA que ensina educação financeira pelo WhatsApp para mais de 6.000 alunos de escolas públicas e particulares. Sistema multiagente em produção no Google Cloud: personalização em tempo real, gamificação, avaliação automática e mais de 1,5 milhão de mensagens processadas. Desenvolvida por mim de ponta a ponta na Barkus."
+                      : "AI tutor teaching financial literacy over WhatsApp to 6,000+ public and private school students. Multi-agent system in production on Google Cloud: real-time personalization, gamification, automated assessment and 1.5M+ messages processed. Built end to end by me at Barkus."}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {["TypeScript", "Google ADK", "OpenAI", "WhatsApp API", "PostgreSQL", "Google Cloud", "Next.js"].map(t => (
@@ -404,7 +404,7 @@ export default function HomePage() {
       {/* About Section */}
       <section id="sobre" className="min-h-screen bg-pure-white text-pure-black flex items-center justify-center">
         <div className="text-center max-w-6xl mx-auto px-6 mt-8 md:mt-0">
-          <h2 className="font-heading font-bold text-5xl md:text-7xl mb-8">
+          <h2 className="font-heading font-bold text-4xl sm:text-5xl md:text-7xl mb-8">
             {locale === "pt" ? "SOBRE MIM" : "ABOUT ME"}
           </h2>
           <p className="font-body text-xl leading-relaxed mb-8 max-w-4xl mx-auto">

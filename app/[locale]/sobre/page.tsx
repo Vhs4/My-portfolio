@@ -585,7 +585,7 @@ export default function SobrePage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="font-heading font-bold text-5xl md:text-7xl mb-6 animate-kinetic-text">
+              <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-7xl mb-6 animate-kinetic-text">
                 <span className="block">{t("hero.greeting")}</span>
                 <span className="block text-royal-blue">{t("hero.name")}</span>
               </h1>

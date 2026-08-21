@@ -17,17 +17,17 @@ const projetosDetalhados = {
       titulo: "Iara",
       subtitulo: "Tutora de IA multiagente que ensina educação financeira pelo WhatsApp",
       descricao:
-        "A Iara é uma tutora de inteligência artificial que conversa com alunos de escolas públicas e particulares direto no WhatsApp, sem precisar de aplicativo. Ela conduz uma jornada completa de educação financeira com narrativa personalizada, gamificação e certificado. Em produção, atende mais de 6.000 alunos e já processou mais de 1,5 milhão de mensagens.",
+        "A Iara é uma tutora de inteligência artificial que conversa com alunos de escolas públicas e particulares direto no WhatsApp, sem precisar de aplicativo. Ela conduz uma jornada completa de educação financeira com narrativa personalizada, gamificação e certificado. Em produção, atende mais de 6.000 alunos e já processou mais de 1,5 milhão de mensagens. Desenvolvida de ponta a ponta por mim na Barkus, edtech onde atuo como Engenheiro de Software & IA.",
       imagemPrincipal: "",
       galeria: [],
       tecnologias: ["TypeScript", "Node.js", "Express", "Google ADK", "Next.js", "Fastify", "PostgreSQL", "Prisma", "OpenAI", "Whisper", "Meta WhatsApp Cloud API", "Google Cloud Run", "Cloud Tasks", "Langfuse"],
       categoria: "IA Multiagente",
       ano: "2026",
       duracao: "",
-      equipe: "Engenharia de ponta a ponta",
+      equipe: "Barkus · Engenharia de ponta a ponta",
       status: "No ar",
       cor: "from-emerald-900 to-emerald-500",
-      cliente: "Edtech de educação financeira",
+      cliente: "Barkus (EdTech de educação financeira)",
       desafio:
         "Levar educação financeira de qualidade a alunos de escolas públicas e particulares onde eles já estão: no WhatsApp, muitas vezes num celular compartilhado e com internet limitada. O sistema precisava conversar com naturalidade, personalizar o ensino por aluno, funcionar em escala com custo de IA controlado e dar visibilidade real para professores e parceiros.",
       solucao:
@@ -155,17 +155,17 @@ const projetosDetalhados = {
       titulo: "Iara",
       subtitulo: "Multi-agent AI tutor teaching financial literacy over WhatsApp",
       descricao:
-        "Iara is an AI tutor that talks to public and private school students directly on WhatsApp, no app required. She guides a complete financial literacy journey with personalized narratives, gamification and certificates. In production, she serves 6,000+ students and has processed over 1.5M messages.",
+        "Iara is an AI tutor that talks to public and private school students directly on WhatsApp, no app required. She guides a complete financial literacy journey with personalized narratives, gamification and certificates. In production, she serves 6,000+ students and has processed over 1.5M messages. Built end to end by me at Barkus, the edtech where I work as a Software & AI Engineer.",
       imagemPrincipal: "",
       galeria: [],
       tecnologias: ["TypeScript", "Node.js", "Express", "Google ADK", "Next.js", "Fastify", "PostgreSQL", "Prisma", "OpenAI", "Whisper", "Meta WhatsApp Cloud API", "Google Cloud Run", "Cloud Tasks", "Langfuse"],
       categoria: "Multi-agent AI",
       ano: "2026",
       duracao: "",
-      equipe: "End-to-end engineering",
+      equipe: "Barkus · End-to-end engineering",
       status: "Live",
       cor: "from-emerald-900 to-emerald-500",
-      cliente: "Financial education edtech",
+      cliente: "Barkus (financial education edtech)",
       desafio:
         "Bring quality financial education to public and private school students where they already are: on WhatsApp, often on a shared phone with limited data. The system had to converse naturally, personalize teaching per student, run at scale with controlled AI costs and give teachers and partners real visibility.",
       solucao:

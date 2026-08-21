@@ -117,7 +117,7 @@ export default function BlogPage() {
       {/* Hero */}
       <section className="py-16 px-6 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="font-heading font-bold text-5xl md:text-7xl mb-6">
+          <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-7xl mb-6">
             <span className="text-pure-black">{t("title")}</span> <span className="text-royal-blue">{t("title_accent")}</span>
           </h1>
           <p className="font-body text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">

@@ -16,14 +16,14 @@ const projetos = {
       titulo: "Iara",
       subtitulo: "Tutora de IA multiagente que ensina educação financeira pelo WhatsApp",
       descricao:
-        "Plataforma educacional com IA em produção atendendo mais de 6.000 alunos de escolas públicas e particulares direto no WhatsApp. Orquestração de agentes de IA especializados, personalização em tempo real, arquitetura multi-tenant no Google Cloud e mais de 1,5 milhão de mensagens processadas.",
+        "Plataforma educacional com IA que desenvolvi de ponta a ponta na Barkus, em produção atendendo mais de 6.000 alunos de escolas públicas e particulares direto no WhatsApp. Orquestração de agentes de IA especializados, personalização em tempo real, arquitetura multi-tenant no Google Cloud e mais de 1,5 milhão de mensagens processadas.",
       imagem: "",
       tecnologias: ["TypeScript", "Node.js", "Google ADK", "Next.js", "Fastify", "PostgreSQL", "OpenAI", "Whisper", "Google Cloud", "Cloud Tasks", "Prisma"],
       externalLink: "",
       categoria: "IA Multiagente",
       ano: "2026",
       duracao: "",
-      equipe: "Engenharia de ponta a ponta",
+      equipe: "Barkus · Engenharia de ponta a ponta",
       status: "No ar",
       cor: "from-emerald-900 to-emerald-500",
     },
@@ -96,14 +96,14 @@ const projetos = {
       titulo: "Iara",
       subtitulo: "Multi-agent AI tutor teaching financial literacy over WhatsApp",
       descricao:
-        "AI education platform in production serving 6,000+ public and private school students directly on WhatsApp. Orchestration of specialized AI agents, real-time personalization, multi-tenant architecture on Google Cloud and 1.5M+ messages processed.",
+        "AI education platform I built end to end at Barkus, in production serving 6,000+ public and private school students directly on WhatsApp. Orchestration of specialized AI agents, real-time personalization, multi-tenant architecture on Google Cloud and 1.5M+ messages processed.",
       imagem: "",
       tecnologias: ["TypeScript", "Node.js", "Google ADK", "Next.js", "Fastify", "PostgreSQL", "OpenAI", "Whisper", "Google Cloud", "Cloud Tasks", "Prisma"],
       externalLink: "",
       categoria: "Multi-agent AI",
       ano: "2026",
       duracao: "",
-      equipe: "End-to-end engineering",
+      equipe: "Barkus · End-to-end engineering",
       status: "Live",
       cor: "from-emerald-900 to-emerald-500",
     },
@@ -233,7 +233,7 @@ export default function ProjetosPage() {
 
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="font-heading font-bold text-6xl md:text-8xl mb-6 animate-kinetic-text">
+          <h1 className="font-heading font-bold text-4xl sm:text-6xl md:text-8xl mb-6 animate-kinetic-text">
             <span className="block">{locale === "pt" ? "ALGUNS DOS MEUS" : "SOME OF MY"}</span>
             <span className="block text-royal-blue">{locale === "pt" ? "PROJETOS" : "PROJECTS"}</span>
           </h1>
