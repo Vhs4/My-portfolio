@@ -14,7 +14,6 @@ import {
   Cloud,
   Zap,
   Award,
-  Calendar,
   MapPin,
   Download,
   Menu,
@@ -595,10 +594,6 @@ export default function SobrePage() {
                 <div className="flex items-center gap-2">
                   <MapPin className="h-5 w-5 text-royal-blue" />
                   <span className="font-body text-gray-300">{t("hero.location")}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-5 w-5 text-royal-blue" />
-                  <span className="font-body text-gray-300">{t("hero.role_label")}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="h-5 w-5 text-royal-blue" />

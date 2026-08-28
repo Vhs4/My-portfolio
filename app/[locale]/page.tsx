@@ -207,7 +207,7 @@ export default function HomePage() {
                       : "AI tutor teaching financial literacy over WhatsApp to 7,000+ public and private school students. Multi-agent system in production on Google Cloud (GCP): real-time personalization, gamification, automated assessment and 1.5M+ messages processed. Built end to end by me at Barkus."}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {["TypeScript", "Google ADK", "OpenAI", "WhatsApp API", "PostgreSQL", "Google Cloud (GCP)", "Next.js"].map(t => (
+                    {(locale === "pt" ? ["Inteligência Artificial", "Multi-Agentes", "Google ADK", "Langfuse", "OpenAI", "WhatsApp API", "Google Cloud (GCP)", "TypeScript", "PostgreSQL", "Next.js"] : ["Artificial Intelligence", "Multi-Agent Systems", "Google ADK", "Langfuse", "OpenAI", "WhatsApp API", "Google Cloud (GCP)", "TypeScript", "PostgreSQL", "Next.js"]).map(t => (
                       <span key={t} className="px-3 py-1 bg-royal-blue/20 text-royal-blue-light rounded-full text-sm font-body">{t}</span>
                     ))}
                   </div>
@@ -251,7 +251,7 @@ export default function HomePage() {
                       : "Complete online learning platform for a PhD professor - built by me end to end (architecture, front, back, infra and deploy). Real-time live quizzes, gamification and GPT-4o AI that generates questions from PDFs and diagnoses per-student learning gaps."}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {["Next.js", "NestJS", "PostgreSQL", "GPT-4o", "Docker", "Traefik"].map(t => (
+                    {(locale === "pt" ? ["Inteligência Artificial", "GPT-4o", "Next.js", "NestJS", "PostgreSQL", "Docker", "Traefik"] : ["Artificial Intelligence", "GPT-4o", "Next.js", "NestJS", "PostgreSQL", "Docker", "Traefik"]).map(t => (
                       <span key={t} className="px-3 py-1 bg-royal-blue/20 text-royal-blue-light rounded-full text-sm font-body">{t}</span>
                     ))}
                   </div>

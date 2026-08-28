@@ -29,8 +29,8 @@ export default function Footer() {
             </Link>
             <p className="font-body text-gray-300 leading-relaxed mb-6 max-w-md">
               {isPt
-                ? "Desenvolvedor Full-Stack & Engenheiro de IA apaixonado por criar experiências digitais extraordinárias. Transformando ideias em código há mais de 3 anos."
-                : "Full-Stack Developer & AI Engineer passionate about building extraordinary digital experiences. Turning ideas into code for over 3 years."}
+                ? "Desenvolvedor Full-Stack & Engenheiro de IA apaixonado por criar experiências digitais extraordinárias. Transformando ideias em código há anos."
+                : "Full-Stack Developer & AI Engineer passionate about building extraordinary digital experiences. Turning ideas into code for years."}
             </p>
             <div className="flex gap-4">
               <Link href="https://github.com/vhs4" className="p-3 rounded-full bg-royal-blue/20 text-royal-blue hover:bg-royal-blue hover:text-white transition-all duration-300">
@@ -70,14 +70,35 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Services — cada item abre o WhatsApp com mensagem pronta */}
           <div>
             <h3 className="font-heading font-bold text-xl mb-6">{isPt ? "Serviços" : "Services"}</h3>
             <ul className="space-y-3">
-              <li><span className="font-body text-gray-300">{isPt ? "Arquitetura & Desenvolvimento de IA" : "AI Architecture & Development"}</span></li>
-              <li><span className="font-body text-gray-300">{isPt ? "Desenvolvimento Web" : "Web Development"}</span></li>
-              <li><span className="font-body text-gray-300">{isPt ? "Aplicações Mobile" : "Mobile Apps"}</span></li>
-              <li><span className="font-body text-gray-300">{isPt ? "Consultoria Técnica" : "Technical Consulting"}</span></li>
+              {(isPt
+                ? [
+                    { rotulo: "Arquitetura & Desenvolvimento de IA", msg: "Olá Victor! Vim pelo seu site e quero conversar sobre arquitetura e desenvolvimento de IA para o meu negócio." },
+                    { rotulo: "Desenvolvimento Web", msg: "Olá Victor! Vim pelo seu site e quero conversar sobre o desenvolvimento de um site ou sistema web." },
+                    { rotulo: "Aplicações Mobile", msg: "Olá Victor! Vim pelo seu site e quero conversar sobre o desenvolvimento de um aplicativo mobile." },
+                    { rotulo: "Consultoria Técnica", msg: "Olá Victor! Vim pelo seu site e preciso de uma consultoria técnica." },
+                  ]
+                : [
+                    { rotulo: "AI Architecture & Development", msg: "Hi Victor! I came from your website and I'd like to talk about AI architecture and development for my business." },
+                    { rotulo: "Web Development", msg: "Hi Victor! I came from your website and I'd like to talk about building a website or web system." },
+                    { rotulo: "Mobile Apps", msg: "Hi Victor! I came from your website and I'd like to talk about building a mobile app." },
+                    { rotulo: "Technical Consulting", msg: "Hi Victor! I came from your website and I need technical consulting." },
+                  ]
+              ).map((servico) => (
+                <li key={servico.rotulo}>
+                  <a
+                    href={`https://wa.me/5511947720129?text=${encodeURIComponent(servico.msg)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body text-gray-300 hover:text-royal-blue transition-colors"
+                  >
+                    {servico.rotulo}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
