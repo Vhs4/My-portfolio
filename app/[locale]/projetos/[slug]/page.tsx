@@ -49,7 +49,7 @@ const projetosDetalhados = {
         "Fila resiliente com reprocesso de mensagens (DLQ) e observabilidade com Langfuse",
       ],
       aprendizados:
-        "Operar IA em produção de verdade é outro esporte: filas, idempotência de crédito, custo por token, observabilidade e migrações sem downtime importam tanto quanto o prompt. Este projeto consolidou minha visão de arquitetura de sistemas multiagente em escala real, atendendo milhares de alunos todos os dias.",
+        "Operar IA em produção de verdade é outro nível: filas, idempotência de crédito, custo por token, observabilidade e migrações sem downtime importam tanto quanto o prompt. Este projeto consolidou minha visão de arquitetura de sistemas multiagente em escala real, atendendo milhares de alunos todos os dias.",
       githubUrl: "",
       liveUrl: "",
     },
@@ -188,7 +188,7 @@ const projetosDetalhados = {
         "Resilient queue with message reprocessing (DLQ) and Langfuse observability",
       ],
       aprendizados:
-        "Running AI in production is a different sport: queues, credit idempotency, cost per token, observability and zero-downtime migrations matter as much as the prompt. This project consolidated my view of multi-agent system architecture at real scale, serving thousands of students every day.",
+        "Running AI in production is a whole other level: queues, credit idempotency, cost per token, observability and zero-downtime migrations matter as much as the prompt. This project consolidated my view of multi-agent system architecture at real scale, serving thousands of students every day.",
       githubUrl: "",
       liveUrl: "",
     },

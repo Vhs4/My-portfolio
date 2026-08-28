@@ -99,9 +99,9 @@ export default function HomePage() {
           <div className={`transition-all duration-1500 delay-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <p className="font-body text-xl md:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto leading-relaxed">
               {locale === "pt" ? (
-                <>Engenheiro Full-Stack & IA — <span className="text-royal-blue font-semibold">liderei o time campeão regional do NASA Space Apps Challenge</span> e já impactei +100 mil pessoas. Hoje construo sistemas multi-agentes de IA em produção que transformam milhares de vidas.</>
+                <>Engenheiro Full-Stack & IA - <span className="text-royal-blue font-semibold">liderei o time campeão regional do NASA Space Apps Challenge</span> e já impactei +100 mil pessoas. Hoje construo sistemas multi-agentes de IA em produção que transformam milhares de vidas.</>
               ) : (
-                <>Full-Stack & AI Engineer — I <span className="text-royal-blue font-semibold">led the regional champion team at the NASA Space Apps Challenge</span> and have impacted 100k+ people. Today I build production multi-agent AI systems that change thousands of lives.</>
+                <>Full-Stack & AI Engineer - I <span className="text-royal-blue font-semibold">led the regional champion team at the NASA Space Apps Challenge</span> and have impacted 100k+ people. Today I build production multi-agent AI systems that change thousands of lives.</>
               )}
             </p>
           </div>
@@ -174,17 +174,17 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* PROJETO IARA — comentado a pedido em 2026-08-14. NÃO APAGAR: para publicar, basta descomentar este bloco.
+          {/* PROJETO IARA - comentado a pedido em 2026-08-14. NÃO APAGAR: para publicar, basta descomentar este bloco.
               Para reativar: troque `false &&` por apenas o conteúdo, ou mude para `true &&`. */}
           {true && (<>
-          {/* Iara — featured full-width */}
+          {/* Iara - featured full-width */}
           <Link href={prefix + "/projetos/iara"} className="group block mb-8">
             <div className="relative overflow-hidden rounded-2xl border border-royal-blue/30 bg-gradient-to-br from-deep-gray to-pure-black transition-all duration-500 hover:border-royal-blue/60">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative flex items-center justify-center p-8 pb-0 lg:pb-8 order-1 lg:order-2">
                   <Image
                     src="/iara-avatar.png"
-                    alt={locale === "pt" ? "Iara — tutora de IA da Barkus" : "Iara — Barkus AI tutor"}
+                    alt={locale === "pt" ? "Iara - tutora de IA da Barkus" : "Iara - Barkus AI tutor"}
                     width={420}
                     height={418}
                     className="w-full max-w-[220px] lg:max-w-[320px] h-auto object-contain"
@@ -221,14 +221,14 @@ export default function HomePage() {
           </Link>
           </>)}
 
-          {/* Questy — featured full-width */}
+          {/* Questy - featured full-width */}
           <Link href={prefix + "/projetos/questy"} className="group block mb-8">
             <div className="relative overflow-hidden rounded-2xl border border-royal-blue/30 bg-gradient-to-br from-deep-gray to-pure-black transition-all duration-500 hover:border-royal-blue/60">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative h-64 lg:h-auto overflow-hidden order-1 lg:order-2">
                   <Image
                     src="/questy-live-professor.webp"
-                    alt="Questy — sala de quiz ao vivo"
+                    alt="Questy - sala de quiz ao vivo"
                     fill
                     className="object-cover object-left-top transition-transform duration-700 group-hover:scale-105"
                   />
@@ -247,8 +247,8 @@ export default function HomePage() {
                   <h3 className="font-heading font-bold text-3xl mb-4 text-white group-hover:text-royal-blue-light transition-colors">Questy</h3>
                   <p className="font-body text-gray-300 mb-6 leading-relaxed">
                     {locale === "pt"
-                      ? "Plataforma de ensino online completa para uma professora doutora — desenvolvida por mim de ponta a ponta (arquitetura, front, back, infra e deploy). Quizzes ao vivo em tempo real, gamificação e IA com GPT-4o para gerar questões a partir de PDFs e diagnosticar déficits de aprendizagem por aluno."
-                      : "Complete online learning platform for a PhD professor — built by me end to end (architecture, front, back, infra and deploy). Real-time live quizzes, gamification and GPT-4o AI that generates questions from PDFs and diagnoses per-student learning gaps."}
+                      ? "Plataforma de ensino online completa para uma professora doutora - desenvolvida por mim de ponta a ponta (arquitetura, front, back, infra e deploy). Quizzes ao vivo em tempo real, gamificação e IA com GPT-4o para gerar questões a partir de PDFs e diagnosticar déficits de aprendizagem por aluno."
+                      : "Complete online learning platform for a PhD professor - built by me end to end (architecture, front, back, infra and deploy). Real-time live quizzes, gamification and GPT-4o AI that generates questions from PDFs and diagnoses per-student learning gaps."}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {["Next.js", "NestJS", "PostgreSQL", "GPT-4o", "Docker", "Traefik"].map(t => (
@@ -331,7 +331,7 @@ export default function HomePage() {
                   <Users className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="font-heading font-bold text-2xl mb-4 text-white group-hover:text-royal-blue-light transition-colors">
-                  {locale === "pt" ? "CAPES Governo Brasileiro" : "CAPES — Brazilian Gov"}
+                  {locale === "pt" ? "CAPES Governo Brasileiro" : "CAPES - Brazilian Gov"}
                 </h3>
                 <p className="font-body text-gray-300 mb-6 leading-relaxed">
                   {locale === "pt"
@@ -364,8 +364,8 @@ export default function HomePage() {
                 <h3 className="font-heading font-bold text-2xl mb-4 text-white group-hover:text-royal-blue-light transition-colors">Esphera Glamping</h3>
                 <p className="font-body text-gray-300 mb-6 leading-relaxed">
                   {locale === "pt"
-                    ? "Site premium multilíngue (PT/EN/ES) e agentes de IA no WhatsApp para o maior glamping de domos geodésicos do Brasil — qualificação autônoma de leads e concierge interno com RAG."
-                    : "Premium multilingual website (PT/EN/ES) and WhatsApp AI agents for Brazil's largest geodesic-dome glamping — autonomous lead qualification and a RAG-powered internal concierge."}
+                    ? "Site premium multilíngue (PT/EN/ES) e agentes de IA no WhatsApp para o maior glamping de domos geodésicos do Brasil - qualificação autônoma de leads e concierge interno com RAG."
+                    : "Premium multilingual website (PT/EN/ES) and WhatsApp AI agents for Brazil's largest geodesic-dome glamping - autonomous lead qualification and a RAG-powered internal concierge."}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {["AI", "LLM", "WhatsApp API", "N8N", "Chatwoot", "SEO", "WordPress"].map(t => (
