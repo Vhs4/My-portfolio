@@ -180,8 +180,17 @@ export default function HomePage() {
           {/* Iara — featured full-width */}
           <Link href={prefix + "/projetos/iara"} className="group block mb-8">
             <div className="relative overflow-hidden rounded-2xl border border-royal-blue/30 bg-gradient-to-br from-deep-gray to-pure-black transition-all duration-500 hover:border-royal-blue/60">
-              <div className="grid grid-cols-1">
-                <div className="relative z-10 p-8 lg:p-10">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="relative flex items-center justify-center p-8 pb-0 lg:pb-8 order-1 lg:order-2">
+                  <Image
+                    src="/iara-avatar.png"
+                    alt={locale === "pt" ? "Iara — tutora de IA da Barkus" : "Iara — Barkus AI tutor"}
+                    width={420}
+                    height={418}
+                    className="w-full max-w-[220px] lg:max-w-[320px] h-auto object-contain"
+                  />
+                </div>
+                <div className="relative z-10 p-8 lg:p-10 order-2 lg:order-1">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="w-14 h-14 bg-gradient-to-br from-royal-blue to-royal-blue-light rounded-xl flex items-center justify-center">
                       <Bot className="h-7 w-7 text-white" />
@@ -194,11 +203,11 @@ export default function HomePage() {
                   <h3 className="font-heading font-bold text-3xl mb-4 text-white group-hover:text-royal-blue-light transition-colors">Iara</h3>
                   <p className="font-body text-gray-300 mb-6 leading-relaxed">
                     {locale === "pt"
-                      ? "Tutora de IA que ensina educação financeira pelo WhatsApp para mais de 6.000 alunos de escolas públicas e particulares. Sistema multiagente em produção no Google Cloud: personalização em tempo real, gamificação, avaliação automática e mais de 1,5 milhão de mensagens processadas. Desenvolvida por mim de ponta a ponta na Barkus."
-                      : "AI tutor teaching financial literacy over WhatsApp to 6,000+ public and private school students. Multi-agent system in production on Google Cloud: real-time personalization, gamification, automated assessment and 1.5M+ messages processed. Built end to end by me at Barkus."}
+                      ? "Tutora de IA que ensina educação financeira pelo WhatsApp para mais de 7.000 alunos de escolas públicas e particulares. Sistema multiagente em produção no Google Cloud (GCP): personalização em tempo real, gamificação, avaliação automática e mais de 1,5 milhão de mensagens processadas. Desenvolvida por mim de ponta a ponta na Barkus."
+                      : "AI tutor teaching financial literacy over WhatsApp to 7,000+ public and private school students. Multi-agent system in production on Google Cloud (GCP): real-time personalization, gamification, automated assessment and 1.5M+ messages processed. Built end to end by me at Barkus."}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {["TypeScript", "Google ADK", "OpenAI", "WhatsApp API", "PostgreSQL", "Google Cloud", "Next.js"].map(t => (
+                    {["TypeScript", "Google ADK", "OpenAI", "WhatsApp API", "PostgreSQL", "Google Cloud (GCP)", "Next.js"].map(t => (
                       <span key={t} className="px-3 py-1 bg-royal-blue/20 text-royal-blue-light rounded-full text-sm font-body">{t}</span>
                     ))}
                   </div>

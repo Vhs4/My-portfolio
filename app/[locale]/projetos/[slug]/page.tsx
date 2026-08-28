@@ -17,8 +17,9 @@ const projetosDetalhados = {
       titulo: "Iara",
       subtitulo: "Tutora de IA multiagente que ensina educação financeira pelo WhatsApp",
       descricao:
-        "A Iara é uma tutora de inteligência artificial que conversa com alunos de escolas públicas e particulares direto no WhatsApp, sem precisar de aplicativo. Ela conduz uma jornada completa de educação financeira com narrativa personalizada, gamificação e certificado. Em produção, atende mais de 6.000 alunos e já processou mais de 1,5 milhão de mensagens. Desenvolvida de ponta a ponta por mim na Barkus, edtech onde atuo como Engenheiro de Software & IA.",
-      imagemPrincipal: "",
+        "A Iara é uma tutora de inteligência artificial que conversa com alunos de escolas públicas e particulares direto no WhatsApp, sem precisar de aplicativo. Ela conduz uma jornada completa de educação financeira com narrativa personalizada, gamificação e certificado. Em produção, atende mais de 7.000 alunos e já processou mais de 1,5 milhão de mensagens. Desenvolvida de ponta a ponta por mim na Barkus, edtech onde atuo como Engenheiro de Software & IA.",
+      imagemPrincipal: "/iara-avatar.png",
+      imagemModo: "contain",
       galeria: [],
       tecnologias: ["TypeScript", "Node.js", "Express", "Google ADK", "Next.js", "Fastify", "PostgreSQL", "Prisma", "OpenAI", "Whisper", "Meta WhatsApp Cloud API", "Google Cloud Run", "Cloud Tasks", "Langfuse"],
       categoria: "IA Multiagente",
@@ -26,14 +27,14 @@ const projetosDetalhados = {
       duracao: "",
       equipe: "Barkus · Engenharia de ponta a ponta",
       status: "No ar",
-      cor: "from-emerald-900 to-emerald-500",
+      cor: "from-blue-900 to-blue-500",
       cliente: "Barkus (EdTech de educação financeira)",
       desafio:
         "Levar educação financeira de qualidade a alunos de escolas públicas e particulares onde eles já estão: no WhatsApp, muitas vezes num celular compartilhado e com internet limitada. O sistema precisava conversar com naturalidade, personalizar o ensino por aluno, funcionar em escala com custo de IA controlado e dar visibilidade real para professores e parceiros.",
       solucao:
-        "Arquitetei um sistema multiagente em produção no Google Cloud, com agentes de IA especializados orquestrados por uma máquina de estados que conduz toda a jornada do aluno, personalização em tempo real e validação automática de qualidade. Fila com Cloud Tasks absorve picos com DLQ para nenhuma mensagem se perder, e a arquitetura multi-tenant no PostgreSQL isola cada parceiro com conteúdo global reutilizável. Em volta do núcleo: CMS administrativo, portal do professor e central de suporte para operação não técnica.",
+        "Arquitetei um sistema multiagente em produção no Google Cloud (GCP), com agentes de IA especializados orquestrados por uma máquina de estados que conduz toda a jornada do aluno, personalização em tempo real e validação automática de qualidade. Fila com Cloud Tasks absorve picos com DLQ para nenhuma mensagem se perder, e a arquitetura multi-tenant no PostgreSQL isola cada parceiro com conteúdo global reutilizável. Em volta do núcleo: CMS administrativo, portal do professor e central de suporte para operação não técnica.",
       resultados: [
-        "Mais de 6.000 alunos atendidos em produção",
+        "Mais de 7.000 alunos atendidos em produção",
         "Mais de 1,5 milhão de mensagens processadas",
         "Trilha completa de conteúdo com certificado automático em PDF",
         "Transcrição de áudio dos alunos com Whisper",
@@ -155,8 +156,9 @@ const projetosDetalhados = {
       titulo: "Iara",
       subtitulo: "Multi-agent AI tutor teaching financial literacy over WhatsApp",
       descricao:
-        "Iara is an AI tutor that talks to public and private school students directly on WhatsApp, no app required. She guides a complete financial literacy journey with personalized narratives, gamification and certificates. In production, she serves 6,000+ students and has processed over 1.5M messages. Built end to end by me at Barkus, the edtech where I work as a Software & AI Engineer.",
-      imagemPrincipal: "",
+        "Iara is an AI tutor that talks to public and private school students directly on WhatsApp, no app required. She guides a complete financial literacy journey with personalized narratives, gamification and certificates. In production, she serves 7,000+ students and has processed over 1.5M messages. Built end to end by me at Barkus, the edtech where I work as a Software & AI Engineer.",
+      imagemPrincipal: "/iara-avatar.png",
+      imagemModo: "contain",
       galeria: [],
       tecnologias: ["TypeScript", "Node.js", "Express", "Google ADK", "Next.js", "Fastify", "PostgreSQL", "Prisma", "OpenAI", "Whisper", "Meta WhatsApp Cloud API", "Google Cloud Run", "Cloud Tasks", "Langfuse"],
       categoria: "Multi-agent AI",
@@ -164,14 +166,14 @@ const projetosDetalhados = {
       duracao: "",
       equipe: "Barkus · End-to-end engineering",
       status: "Live",
-      cor: "from-emerald-900 to-emerald-500",
+      cor: "from-blue-900 to-blue-500",
       cliente: "Barkus (financial education edtech)",
       desafio:
         "Bring quality financial education to public and private school students where they already are: on WhatsApp, often on a shared phone with limited data. The system had to converse naturally, personalize teaching per student, run at scale with controlled AI costs and give teachers and partners real visibility.",
       solucao:
-        "I architected a multi-agent system in production on Google Cloud, with specialized AI agents orchestrated by a state machine that drives the entire student journey, real-time personalization and automated quality validation. A Cloud Tasks queue absorbs spikes with a DLQ so no message is ever lost, and the multi-tenant PostgreSQL architecture isolates each partner with reusable global content. Around the core: an admin CMS, a teacher portal and a support center built for non-technical operators.",
+        "I architected a multi-agent system in production on Google Cloud (GCP), with specialized AI agents orchestrated by a state machine that drives the entire student journey, real-time personalization and automated quality validation. A Cloud Tasks queue absorbs spikes with a DLQ so no message is ever lost, and the multi-tenant PostgreSQL architecture isolates each partner with reusable global content. Around the core: an admin CMS, a teacher portal and a support center built for non-technical operators.",
       resultados: [
-        "6,000+ students served in production",
+        "7,000+ students served in production",
         "1.5M+ messages processed",
         "Complete content track with automatic PDF certificates",
         "Student audio transcription with Whisper",
@@ -374,7 +376,11 @@ export default function ProjectDetailPage({ params }: { params: { slug: string; 
               </div>
             </div>
             <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden">
-              {projeto.imagemPrincipal ? (
+              {projeto.imagemPrincipal && (projeto as { imagemModo?: string }).imagemModo === "contain" ? (
+                <div className={`absolute inset-0 bg-gradient-to-br ${projeto.cor} opacity-90 flex items-center justify-center p-8`}>
+                  <Image src={projeto.imagemPrincipal} alt={projeto.titulo} width={420} height={418} className="h-full w-auto object-contain" />
+                </div>
+              ) : projeto.imagemPrincipal ? (
                 <>
                   <Image src={projeto.imagemPrincipal} alt={projeto.titulo} fill className="object-cover" />
                   <div className={`absolute inset-0 bg-gradient-to-br ${projeto.cor} opacity-30`} />

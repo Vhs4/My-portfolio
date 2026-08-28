@@ -16,16 +16,17 @@ const projetos = {
       titulo: "Iara",
       subtitulo: "Tutora de IA multiagente que ensina educação financeira pelo WhatsApp",
       descricao:
-        "Plataforma educacional com IA que desenvolvi de ponta a ponta na Barkus, em produção atendendo mais de 6.000 alunos de escolas públicas e particulares direto no WhatsApp. Orquestração de agentes de IA especializados, personalização em tempo real, arquitetura multi-tenant no Google Cloud e mais de 1,5 milhão de mensagens processadas.",
-      imagem: "",
-      tecnologias: ["TypeScript", "Node.js", "Google ADK", "Next.js", "Fastify", "PostgreSQL", "OpenAI", "Whisper", "Google Cloud", "Cloud Tasks", "Prisma"],
+        "Plataforma educacional com IA que desenvolvi de ponta a ponta na Barkus, em produção atendendo mais de 7.000 alunos de escolas públicas e particulares direto no WhatsApp. Orquestração de agentes de IA especializados, personalização em tempo real, arquitetura multi-tenant no Google Cloud (GCP) e mais de 1,5 milhão de mensagens processadas.",
+      imagem: "/iara-avatar.png",
+      imagemModo: "contain",
+      tecnologias: ["TypeScript", "Node.js", "Google ADK", "Next.js", "Fastify", "PostgreSQL", "OpenAI", "Whisper", "Google Cloud (GCP)", "Cloud Tasks", "Prisma"],
       externalLink: "",
       categoria: "IA Multiagente",
       ano: "2026",
       duracao: "",
       equipe: "Barkus · Engenharia de ponta a ponta",
       status: "No ar",
-      cor: "from-emerald-900 to-emerald-500",
+      cor: "from-blue-900 to-blue-500",
     },
     {
       id: "fully",
@@ -96,16 +97,17 @@ const projetos = {
       titulo: "Iara",
       subtitulo: "Multi-agent AI tutor teaching financial literacy over WhatsApp",
       descricao:
-        "AI education platform I built end to end at Barkus, in production serving 6,000+ public and private school students directly on WhatsApp. Orchestration of specialized AI agents, real-time personalization, multi-tenant architecture on Google Cloud and 1.5M+ messages processed.",
-      imagem: "",
-      tecnologias: ["TypeScript", "Node.js", "Google ADK", "Next.js", "Fastify", "PostgreSQL", "OpenAI", "Whisper", "Google Cloud", "Cloud Tasks", "Prisma"],
+        "AI education platform I built end to end at Barkus, in production serving 7,000+ public and private school students directly on WhatsApp. Orchestration of specialized AI agents, real-time personalization, multi-tenant architecture on Google Cloud (GCP) and 1.5M+ messages processed.",
+      imagem: "/iara-avatar.png",
+      imagemModo: "contain",
+      tecnologias: ["TypeScript", "Node.js", "Google ADK", "Next.js", "Fastify", "PostgreSQL", "OpenAI", "Whisper", "Google Cloud (GCP)", "Cloud Tasks", "Prisma"],
       externalLink: "",
       categoria: "Multi-agent AI",
       ano: "2026",
       duracao: "",
       equipe: "Barkus · End-to-end engineering",
       status: "Live",
-      cor: "from-emerald-900 to-emerald-500",
+      cor: "from-blue-900 to-blue-500",
     },
     {
       id: "fully",
@@ -261,7 +263,17 @@ export default function ProjetosPage() {
                 <div className="bg-deep-gray rounded-2xl overflow-hidden border border-transparent group-hover:border-royal-blue transition-all duration-500 md:tilt-effect">
                   <div className="relative h-80 overflow-hidden">
                     <div className={`absolute inset-0 bg-gradient-to-br ${projeto.cor} opacity-20 group-hover:opacity-40 transition-opacity duration-500`} />
-                    {projeto.imagem ? (
+                    {projeto.imagem && (projeto as { imagemModo?: string }).imagemModo === "contain" ? (
+                      <div className={`absolute inset-0 bg-gradient-to-br ${projeto.cor} opacity-90 flex items-center justify-center p-6`}>
+                        <Image
+                          src={projeto.imagem}
+                          alt={projeto.titulo}
+                          width={420}
+                          height={418}
+                          className={`h-full w-auto object-contain transition-transform duration-700 ${!isMobile ? "group-hover:scale-105" : ""}`}
+                        />
+                      </div>
+                    ) : projeto.imagem ? (
                       <Image
                         src={projeto.imagem}
                         alt={projeto.titulo}

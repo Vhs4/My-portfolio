@@ -93,7 +93,7 @@ const experiencias = {
       empresa: "Barkus (EdTech)",
       periodo: "maio de 2026 - Presente",
       descricao:
-        "Único engenheiro responsável pela arquitetura e desenvolvimento end-to-end da Iara 2.0 — plataforma de educação financeira conversacional via WhatsApp com sistema multi-agente de IA, em produção com +6.000 alunos de escolas públicas e particulares e +1,5 milhão de mensagens processadas. Como Forward Deployed Engineer, além da engenharia presto suporte técnico a alunos e ao time de operação direto em produção.",
+        "Único engenheiro responsável pela arquitetura e desenvolvimento end-to-end da Iara 2.0 — plataforma de educação financeira conversacional via WhatsApp com sistema multi-agente de IA, em produção com +7.000 alunos de escolas públicas e particulares e +1,5 milhão de mensagens processadas. Como Forward Deployed Engineer, além da engenharia presto suporte técnico a alunos e ao time de operação direto em produção.",
       conquistas: [
         "Arquitetei um sistema multi-agente com agentes de IA especializados, coordenados por uma máquina de estados que conduz toda a jornada de aprendizagem",
         "Construí 3 serviços backend independentes: engine de IA (Express), CMS com autoria de conteúdo por IA via Gemini 2.5 Flash (Next.js 14) e Portal do Professor (Fastify 5 + Prisma 6)",
@@ -299,7 +299,7 @@ const experiencias = {
       empresa: "Barkus (EdTech)",
       periodo: "May 2026 - Present",
       descricao:
-        "Sole engineer responsible for the end-to-end architecture and development of Iara 2.0 — a conversational financial education platform on WhatsApp powered by a multi-agent AI system, in production with 6,000+ public and private school students and 1.5M+ messages processed. As a Forward Deployed Engineer, beyond engineering I provide technical support to students and the operations team directly in production.",
+        "Sole engineer responsible for the end-to-end architecture and development of Iara 2.0 — a conversational financial education platform on WhatsApp powered by a multi-agent AI system, in production with 7,000+ public and private school students and 1.5M+ messages processed. As a Forward Deployed Engineer, beyond engineering I provide technical support to students and the operations team directly in production.",
       conquistas: [
         "Architected a multi-agent system with specialized AI agents, coordinated through a state machine that drives the entire learning journey",
         "Built 3 independent backend services: core AI engine (Express), CMS with AI-powered content authoring via Gemini 2.5 Flash (Next.js 14) and Teacher Portal (Fastify 5 + Prisma 6)",
