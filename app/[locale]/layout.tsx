@@ -78,11 +78,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         "max-snippet": -1,
       },
     },
-    verification: {
-      google: "google-site-verification-code",
-      yandex: "yandex-verification-code",
-      yahoo: "yahoo-site-verification-code",
-    },
+    verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+      : undefined,
   }
 }
 
